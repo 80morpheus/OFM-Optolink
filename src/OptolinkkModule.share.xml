@@ -87,12 +87,22 @@
 
               
 
-              <ParameterType Id="%AID%_PT-HardwareVersion" Name="HardwareVersion">
-                <TypeRestriction Base="Value" SizeInBit="2" UIHint="DropDown">
+              <ParameterType Id="%AID%_PT-Heizungstyp" Name="Heizungstyp">
+                <TypeRestriction Base="Value" SizeInBit="6" UIHint="DropDown">
                   <Enumeration Text="Deaktiviert"   Value="0" Id="%ENID%" />
                   <Enumeration Text="Vitocal 200 A" Value="1" Id="%ENID%" />
-                  <Enumeration Text="Vitocal XXX  " Value="2" Id="%ENID%" />
-                  <Enumeration Text="Vitocal XXX  " Value="3" Id="%ENID%" />
+                  <Enumeration Text="Vitocal 250 A" Value="2" Id="%ENID%" />
+                  <Enumeration Text="Vitocal 300 A" Value="3" Id="%ENID%" />
+                  <!-- 4 bit free -->
+                </TypeRestriction>
+              </ParameterType>
+
+              <ParameterType Id="%AID%_PT-HardwareVersion" Name="Hardwareversion">
+                <TypeRestriction Base="Value" SizeInBit="2" UIHint="DropDown">
+                  <Enumeration Text="Deaktiviert" Value="0" Id="%ENID%" />
+                  <Enumeration Text="Reg1 Base  " Value="1" Id="%ENID%" />
+                  <Enumeration Text="UP1 GW UART" Value="2" Id="%ENID%" />
+                  <Enumeration Text="           " Value="3" Id="%ENID%" />
                 </TypeRestriction>
               </ParameterType>
 
@@ -103,7 +113,7 @@
                 <Memory CodeSegment="%AID%_RS-04-00000" Offset="0" BitOffset="0" />
                 <Parameter Id="%AID%_UP-%TT%00001" Name="HardwareVersion"                     ParameterType="%AID%_PT-HardwareVersion" Offset="0" BitOffset="0" Text="Hardware-Version" Value="0" />
                 <!-- 2 bits free -->
-                <Parameter Id="%AID%_UP-%TT%00006" Name="DimmerCcType"                        ParameterType="%AID%_PT-DimmerCcType" Offset="0" BitOffset="6" Text="Dimmart Constant Current" Value="0" />
+                <Parameter Id="%AID%_UP-%TT%00006" Name="HeaterType"                        ParameterType="%AID%_PT-HeaterType" Offset="0" BitOffset="2" Text="Heater Type" Value="0" />
                 <!-- 1 bit free -->
               </Union>
               
@@ -170,22 +180,23 @@
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
 
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="Hardwarezuordnung" UIHint="Headline" />
-
-                <ParameterBlock Id="%AID%_PB-12" Name="Table1ChannelAssignment" Text="Kanal" Inline="true" Layout="Table" HelpContext="LED-Kanalzuordnung">
-                  <Rows>
-                    <op:include href="LEDModule.templ.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock[@Name='HWChannels']/Rows/*" prefix="LED" type="template" IsInner="true" />
-                  </Rows>
-                  <Columns>
-                    <Column Id="%AID%_PB-12_C-1" Name="Col1" Text="Typ" Width="33%" />
-                    <Column Id="%AID%_PB-12_C-2" Name="Col2" Text="Dimmkanal (0=inaktiv)" Width="33%" />
-                    <Column Id="%AID%_PB-12_C-3" Name="Col3" Text="Funktion" Width="33%" />
-                  </Columns>
-                  <op:include href="LEDModule.templ.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock[@Name='AssignmentTable']/*" prefix="LED" type="template" IsInner="true" />
-                </ParameterBlock>
+                <ParameterRefRef RefId="%AID%_UP-%TT%00001_R-%TT%0000101" IndentLevel="1" HelpContext="OPTOLINK-Hardwarezuordnung" />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="Auswahl Heizungstyp" UIHint="Headline" />
+                <ParameterRefRef RefId="%AID%_UP-%TT%00006_R-%TT%0000601" IndentLevel="1" HelpContext="OPTOLINK-Heizungstyp" />
 
 
-                
-
+                <choose ParamRefId="%AID%_UP-%TT%00006_R-%TT%0000601"> <!-- Heater Type -->
+                  <when test="1">
+                    <op:include href="OptolinkModule_200A.templ.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock[@Name='AssignmentTableLine']/*" prefix="OPTO" type="template" IsInner="true" />
+                  </when>
+                  <when test="2">
+                    <op:include href="OptolinkModule_250A.templ.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock[@Name='AssignmentTableLine']/*" prefix="OPTO" type="template" IsInner="true" />
+                  </when>
+                  <when test="3">
+                    <op:include href="OptolinkModule_300A.templ.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock[@Name='AssignmentTableLine']/*" prefix="OPTO" type="template" IsInner="true" />
+                  </when>
+                </choose>
                 
               </ParameterBlock>
 
