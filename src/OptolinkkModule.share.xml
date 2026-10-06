@@ -90,7 +90,7 @@
               <ParameterType Id="%AID%_PT-Heizungstyp" Name="Heizungstyp">
                 <TypeRestriction Base="Value" SizeInBit="6" UIHint="DropDown">
                   <Enumeration Text="Deaktiviert"   Value="0" Id="%ENID%" />
-                  <Enumeration Text="Vitocal 200 A" Value="1" Id="%ENID%" />
+                  <Enumeration Text="Vitocal 200 A WO1C" Value="1" Id="%ENID%" />
                   <Enumeration Text="Vitocal 250 A" Value="2" Id="%ENID%" />
                   <Enumeration Text="Vitocal 300 A" Value="3" Id="%ENID%" />
                   <!-- 4 bit free -->
