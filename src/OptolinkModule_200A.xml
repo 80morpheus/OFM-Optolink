@@ -250,7 +250,7 @@
           <Dynamic>
             <ChannelIndependentBlock>
 
-              
+              <ParameterBlock Id="%AID%_PB-nnn" Name="Settings" Text="AAAllgemein" Icon="cog-outline" ShowInComObjectTree="true">
                 <!-- Table header -->
                 <ParameterBlock Id="%AID%_PB-nnn" Inline="true" Layout="Grid" HelpContext="Parameter zum ständigen Auslesen">
                   <Rows>
@@ -421,31 +421,8 @@
                   </when>
                 </choose>
               </ParameterBlock>
+</ParameterBlock>
 
-              <ParameterBlock Id="%AID%_PB-nnn" Name="FunctionAssignment">
-                <choose ParamRefId="%AID%_P-%TT%%CC%005_R-%TT%%CC%00501">                  <!-- TW Light -->
-                  <op:usePart name="LED_TW" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock/*" />
-                </choose>
-
-                <choose ParamRefId="%AID%_P-%TT%%CC%009_R-%TT%%CC%00901">                  <!-- SC Light -->
-                  <op:usePart name="LED_SC" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock/*" />
-                </choose>
-
-                <choose ParamRefId="%AID%_P-%TT%%CC%006_R-%TT%%CC%00601">                  <!-- RGB Light -->
-                  <op:usePart name="LED_RGB" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock/*" />
-                </choose>
-
-                <choose ParamRefId="%AID%_P-%TT%%CC%013_R-%TT%%CC%01301">                  <!-- RGBW Light -->
-                  <op:usePart name="LED_RGBW" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock/*" />
-                </choose>
-
-                <choose ParamRefId="%AID%_P-%TT%%CC%014_R-%TT%%CC%01401">                  <!-- RGBTW Light -->
-                  <op:usePart name="LED_RGBTW" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock/*" />
-                </choose>
-                
-                
-
-              </ParameterBlock>
             </ChannelIndependentBlock>
           </Dynamic>
 
