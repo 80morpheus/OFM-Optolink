@@ -1,53 +1,25 @@
 #pragma once
 #include "OpenKNX.h"
-#include <Adafruit_NeoPixel.h>
-#include <Adafruit_PWMServoDriver.h>
-#include <SPI.h>
-#include <Wire.h>
-#ifdef OPENKNX_LED_TEMPSENS_ADDR
-    #include <Temperature_LM75_Derived.h>
+#include <VitoWiFi.h>
+#ifdef 200A
+#include "200A.adressen.h"
 #endif
-#include "HWDimmer/HWDimmer.h"
-#ifdef LEDMODULE_DIMMER_PCA9685
-    #include "HWDimmer/HWDimmerPCA.h"
+#ifdef 250A
+#include "250A.adressen.h"
 #endif
-#ifdef LEDMODULE_DIMMMER_RP2040
-    #include "HWDimmer/HWDimmerRP2040.h"
+#ifdef 300A
+#include "300A.adressen.h"
 #endif
-#ifdef LEDMODULE_DIMMMER_WS
-    #include "HWDimmer/HWDimmerWS.h"
-#endif
-#include "Channels/RGBChannel.h"
-#include "Channels/SingleChannel.h"
-#include "Channels/TWChannel.h"
-#include "LedModuleConfig.h"
 
-#define PWM_FREQUENCY_FACTOR 200 // based on ETS drop down
 
-#define TEMPERATURE_MIN_DIFFERENCE 0.5
 
-class LedModule : public OpenKNX::Module
+class OptolinkModule : public OpenKNX::Module
 {
   private:
-    uint32_t _timer1 = 0;
-    uint32_t _timer2 = 0;
-    uint32_t _timerCheckConnection = 0;
-    float _lastTemperatureSent = 0;
-    uint32_t _temperaturSendTimer = 0;
-    bool _doResetPwm = false;
+       
 
-    OpenKNX::Flash::Driver *_ledStorage = nullptr;
-    HWDimmer *_pDimmer;
-    uint8_t _SC_HWChannels[LED_SC_ChannelCount][1];
-    uint8_t _TW_HWChannels[LED_TW_ChannelCount][2];
-    uint8_t _RGB_HWChannels[LED_RGB_ChannelCount][3];
-    SingleChannel *_singleChannels[LED_SC_ChannelCount];
-    TWChannel *_twChannels[LED_TW_ChannelCount];
-    RGBChannel *_rgbChannels[LED_RGB_ChannelCount];
 
-#ifdef OPENKNX_LED_TEMPSENS_ADDR
-    Generic_LM75_9_to_12Bit_OneShot _temperature = Generic_LM75_9_to_12Bit_OneShot(&OPENKNX_GPIO_WIRE, OPENKNX_LED_TEMPSENS_ADDR);
-#endif
+
 
     void setupCustomFlash();
     void setupChannels();
@@ -56,6 +28,13 @@ class LedModule : public OpenKNX::Module
     void setupConstantCurrentMode();
 
   public:
+    unsigned long int IntervalTimer[100] = 0; //millis letzter aufruf speichern
+    uint16_t ParamTime[100] = 0; // jedweilige zeit des parameters
+    uint16_t ParamAddr[100] = 0; // jeweilige adresse des parameters
+    uint8_t ParamLength[100] = 0; // jeweilige länge des parameters
+    uint8_t Warteliste[100] = 0;  // aktuelle warteliste
+
+
     void loop(bool configured) override;
     void setup(bool configured) override;
 #ifdef OPENKNX_DUALCORE
