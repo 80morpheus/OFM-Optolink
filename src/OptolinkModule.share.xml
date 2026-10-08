@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../../../Organization/knxprod-support/knx_project_20/knx-editor.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<KNX xmlns:op="http://github.com/OpenKNX/OpenKNXproducer" xmlns="http://knx.org/xml/project/20" CreatedBy="KNX MT" ToolVersion="5.1.255.16695">
+
+  <ManufacturerData>
+    <Manufacturer>
+      <ApplicationPrograms>
+        <ApplicationProgram>
+
+
+          <Static>
+            <ParameterTypes>
+
+
+              
+
+              
+
+
+              
+
+              <ParameterType Id="%AID%_PT-Heizungstyp" Name="Heizungstyp">
+                <TypeRestriction Base="Value" SizeInBit="6" UIHint="DropDown">
+                  <Enumeration Text="Deaktiviert"   Value="0" Id="%ENID%" />
+                  <Enumeration Text="Vitocal 200 A WO1C" Value="1" Id="%ENID%" />
+                  <Enumeration Text="Vitocal 250 A" Value="2" Id="%ENID%" />
+                  <Enumeration Text="Vitocal 300 A" Value="3" Id="%ENID%" />
+                  <!-- 4 bit free -->
+                </TypeRestriction>
+              </ParameterType>
+
+              <ParameterType Id="%AID%_PT-HardwareVersion" Name="Hardwareversion">
+                <TypeRestriction Base="Value" SizeInBit="2" UIHint="DropDown">
+                  <Enumeration Text="Deaktiviert" Value="0" Id="%ENID%" />
+                  <Enumeration Text="Reg1 Base  " Value="1" Id="%ENID%" />
+                  <Enumeration Text="UP1 GW UART" Value="2" Id="%ENID%" />
+                  <Enumeration Text="           " Value="3" Id="%ENID%" />
+                </TypeRestriction>
+              </ParameterType>
+
+            </ParameterTypes>
+
+            <Parameters>      
+
+              <Union SizeInBit="16">
+                <Memory CodeSegment="%AID%_RS-04-00000" Offset="16" BitOffset="0" />
+                <Parameter Id="%AID%_UP-%TT%00011" Name="FrontControlOutput"                  ParameterType="%AID%_PT-OnOffYesNo" Offset="0" BitOffset="0" Text="LED-Ausgabe aktivieren" Value="1" />
+                <Parameter Id="%AID%_UP-%TT%00012" Name="FrontControlInput"                   ParameterType="%AID%_PT-OnOffYesNo" Offset="0" BitOffset="1" Text="Frontbedienung aktivieren" Value="0" />
+                <!-- 6 bits free -->
+                <Parameter Id="%AID%_UP-%TT%00013" Name="FrontControlManualBrightness_%C%"    ParameterType="%AID%_PT-ValueDpt5001" Offset="1" BitOffset="0" Text="Helligkeit bei An" Value="50" SuffixText="%" />
+              </Union>
+ 
+              <Union SizeInBit="8">
+                <Memory CodeSegment="%AID%_RS-04-00000" Offset="0" BitOffset="0" />
+                <Parameter Id="%AID%_UP-%TT%00011" Name="FrontControlOutput"                  ParameterType="%AID%_PT-OnOffYesNo"      Offset="0" BitOffset="0" Text="LED-Ausgabe aktivieren" Value="1" />
+                <Parameter Id="%AID%_UP-%TT%00001" Name="HardwareVersion"                     ParameterType="%AID%_PT-HardwareVersion" Offset="0" BitOffset="0" Text="Hardware-Version" Value="0" />
+                <!-- 2 bits free -->
+                <Parameter Id="%AID%_UP-%TT%00006" Name="HeaterType"                        ParameterType="%AID%_PT-HeaterType" Offset="0" BitOffset="2" Text="Heater Type" Value="0" />
+                <!-- 1 bit free -->
+              </Union>
+              
+           </Parameters>
+
+            <ParameterRefs>
+              <ParameterRef Id="%AID%_UP-%TT%00001_R-%TT%0000101" RefId="%AID%_UP-%TT%00001" />
+              <ParameterRef Id="%AID%_UP-%TT%00002_R-%TT%0000201" RefId="%AID%_UP-%TT%00002" />
+              <ParameterRef Id="%AID%_UP-%TT%00003_R-%TT%0000301" RefId="%AID%_UP-%TT%00003" />
+              <ParameterRef Id="%AID%_UP-%TT%00004_R-%TT%0000401" RefId="%AID%_UP-%TT%00004" />
+              <ParameterRef Id="%AID%_UP-%TT%00005_R-%TT%0000501" RefId="%AID%_UP-%TT%00005" />
+              <ParameterRef Id="%AID%_UP-%TT%00006_R-%TT%0000601" RefId="%AID%_UP-%TT%00006" />
+              <ParameterRef Id="%AID%_UP-%TT%00007_R-%TT%0000701" RefId="%AID%_UP-%TT%00007" />
+              <ParameterRef Id="%AID%_UP-%TT%00008_R-%TT%0000801" RefId="%AID%_UP-%TT%00008" />
+              <ParameterRef Id="%AID%_UP-%TT%00009_R-%TT%0000901" RefId="%AID%_UP-%TT%00009" />
+              <ParameterRef Id="%AID%_UP-%TT%00010_R-%TT%0001001" RefId="%AID%_UP-%TT%00010" />
+              <ParameterRef Id="%AID%_UP-%TT%00011_R-%TT%0001101" RefId="%AID%_UP-%TT%00011" />
+              <ParameterRef Id="%AID%_UP-%TT%00012_R-%TT%0001201" RefId="%AID%_UP-%TT%00012" />
+              <ParameterRef Id="%AID%_UP-%TT%00013_R-%TT%0001301" RefId="%AID%_UP-%TT%00013" />
+              <ParameterRef Id="%AID%_UP-%TT%00014_R-%TT%0001401" RefId="%AID%_UP-%TT%00014" />
+              <ParameterRef Id="%AID%_UP-%TT%00015_R-%TT%0001501" RefId="%AID%_UP-%TT%00015" />
+              <ParameterRef Id="%AID%_UP-%TT%00016_R-%TT%0001601" RefId="%AID%_UP-%TT%00016" />
+              <ParameterRef Id="%AID%_UP-%TT%00017_R-%TT%0001701" RefId="%AID%_UP-%TT%00017" />
+              <ParameterRef Id="%AID%_UP-%TT%00018_R-%TT%0001801" RefId="%AID%_UP-%TT%00018" />
+              <ParameterRef Id="%AID%_UP-%TT%00019_R-%TT%0001901" RefId="%AID%_UP-%TT%00019" />
+              <ParameterRef Id="%AID%_UP-%TT%00020_R-%TT%0002001" RefId="%AID%_UP-%TT%00020" />
+            </ParameterRefs>
+
+            <ComObjectTable>
+              <ComObject Id="%AID%_O-%TT%00001" Name="PowerSupplyRelay" Number="0" ObjectSize="1 Bit" Text="Externes Netzteil-Relais" FunctionText="Anforderung" ReadFlag="Enabled" WriteFlag="Disabled" CommunicationFlag="Enabled" TransmitFlag="Enabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-1-1" />
+              <ComObject Id="%AID%_O-%TT%00002" Name="PowerSupplyRelayStatus" Number="1" ObjectSize="1 Bit" Text="Externes Netzteil-Relais" FunctionText="Rückmeldung" ReadFlag="Disabled" WriteFlag="Enabled" CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Enabled" ReadOnInitFlag="Disabled" DatapointType="DPST-1-1" />
+              <ComObject Id="%AID%_O-%TT%00003" Name="PowerSupplyVoltage" Number="2" ObjectSize="2 Bytes" Text="Netzteilspannung" FunctionText="Status" ReadFlag="Enabled" WriteFlag="Disabled" CommunicationFlag="Enabled" TransmitFlag="Enabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-20" />
+              <ComObject Id="%AID%_O-%TT%00004" Name="Temperature" Number="3" ObjectSize="2 Bytes" Text="Temperatur" FunctionText="Status" ReadFlag="Enabled" WriteFlag="Disabled" CommunicationFlag="Enabled" TransmitFlag="Enabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1" />
+            </ComObjectTable>
+
+            <ComObjectRefs>
+              <ComObjectRef Id="%AID%_O-%TT%00001_R-%TT%0000101" RefId="%AID%_O-%TT%00001" />
+              <ComObjectRef Id="%AID%_O-%TT%00002_R-%TT%0000201" RefId="%AID%_O-%TT%00002" />
+              <ComObjectRef Id="%AID%_O-%TT%00003_R-%TT%0000301" RefId="%AID%_O-%TT%00003" />
+              <ComObjectRef Id="%AID%_O-%TT%00004_R-%TT%0000401" RefId="%AID%_O-%TT%00004" />
+            </ComObjectRefs>
+
+            <Extension>
+              <Baggage RefId="%FILE-HELP-de%" />
+              <Baggage RefId="%FILE-ICONS%" />
+              <Baggage RefId="%FILE-openknx%" />
+              <Baggage RefId="%FILE-pics-and%" />
+              <Baggage RefId="%FILE-pics-or%" />
+            </Extension>
+          </Static>
+
+          <Dynamic>
+            <Channel Name="Optolink" Text="Optolink" Number="%PREFIX%" Id="%AID%_CH-%PREFIX%" HelpContext="Empty" >
+              <ParameterBlock Id="%AID%_PB-nnn" Name="Settings" Text="Allgemein" Icon="cog-outline" ShowInComObjectTree="true">
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="Optolink" UIHint="Headline" />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="Version: %ModuleVersion%" />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
+
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="Hardwarezuordnung" UIHint="Headline" />
+                <ParameterRefRef RefId="%AID%_UP-%TT%00001_R-%TT%0000101" IndentLevel="1"  />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="Auswahl Heizungstyp" UIHint="Headline" />
+                <ParameterRefRef RefId="%AID%_UP-%TT%00006_R-%TT%0000601" IndentLevel="1"  />
+
+              </ParameterBlock>
+              
+                <choose ParamRefId="%AID%_UP-%TT%00006_R-%TT%0000601"> <!-- Heater Type -->
+                  <when test="1">
+                    <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable" Text="Zuordnungstabelle" Icon="cog-outline" ShowInComObjectTree="true">
+                    <op:include href="OptolinkModule_200A.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock[@Name='AssignmentTableLine']/*" prefix="OPTO" type="template" IsInner="true" />
+                    </ParameterBlock>
+                  </when>
+                  <when test="2">
+                    <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable" Text="Zuordnungstabelle" Icon="cog-outline" ShowInComObjectTree="true">
+                    <op:include href="OptolinkModule_250A.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock[@Name='AssignmentTableLine']/*" prefix="OPTO" type="template" IsInner="true" /> 
+                  </ParameterBlock>
+                  </when>
+                  <when test="3">
+                    <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable" Text="Zuordnungstabelle" Icon="cog-outline" ShowInComObjectTree="true">
+                    <op:include href="OptolinkModule_300A.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock[@Name='AssignmentTableLine']/*" prefix="OPTO" type="template" IsInner="true" />
+                    </ParameterBlock>
+                  </when>
+                </choose>
+                
+              
+
+              
+            </Channel>
+
+          </Dynamic>
+
+        </ApplicationProgram>
+      </ApplicationPrograms>
+      <Baggages>
+        <Baggage TargetPath="" Name="Help_de.zip" Id="%FILE-HELP-de%">
+          <FileInfo TimeInfo="%DATETIME%" />
+        </Baggage>
+        <Baggage TargetPath="" Name="Icons.zip" Id="%FILE-ICONS%">
+          <FileInfo TimeInfo="%DATETIME%" />
+        </Baggage>
+      </Baggages>
+    </Manufacturer>
+  </ManufacturerData>
+</KNX>
