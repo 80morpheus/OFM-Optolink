@@ -1,21 +1,19 @@
-#include "LedModule.h"
-#include "LedModuleConfig.h"
+#include "OptolinkModule.h"
 #include "OpenKNX.h"
 
-#include "Colors.h"
 
-const std::string LedModule::name()
+const std::string OptolinkModule::name()
 {
-    return LEDMODULE_HARDWARE_NAME;
+    return OptolinkMODULE_HARDWARE_NAME;
 }
 
-const std::string LedModule::version()
+const std::string OptolinkModule::version()
 {
     // hides the module in the version output on the console, because the firmware version is sufficient.
     return "";
 }
 
-void LedModule::setup(bool configured)
+void OptolinkModule::setup(bool configured)
 {
     if (!configured)
     {
@@ -25,34 +23,9 @@ void LedModule::setup(bool configured)
 
     logInfoP("Init:");
     logIndentUp();
-
-#if defined(LEDMODULE_DIMMER_PCA9685)
-    logInfoP("LEDMODULE_DIMMER_PCA9685");
-    _pDimmer = new HWDimmerPCA(HWDimmerPCA::PCAType::PCA9685, LEDMODULE_PCA_ADDR, LEDMODULE_PCA_PWMFREQUENCY);
-    logInfoP("LEDMODULE_DIMMER_PCA9685 SET");
-#else
-    #if defined(LEDMODULE_DIMMMER_RP2040)
-    _pDimmer = new HWDimmerRP2040(dimPins, LEDMODULE_MAX_LIGHT_CHANNELS, (ParamLED_PwmFrequency + 1) * PWM_FREQUENCY_FACTOR);
-    logInfoP("LEDMODULE_DIMMER_RP2040");
-    #else
-        #if defined(LEDMODULE_DIMMMER_WS)
-    _pDimmer = new HWDimmerWS(HWDimmerWS::WSType::WS2811, LEDMODULE_WS_PIN, LEDMOPDULE_WS_NUM_LEDS);
-    logInfoP("LEDMODULE_DIMMER_WS");
-        #else // create dummy driver to have dimmer initialized
-    dimmer = new HWDimmer(1);
-    logErrorP("Unknown PWM driver %s ('RP2040' and 'PCA9685PW' are supported)", LEDMODULE_PWMDRIVER);
-        #endif
-    #endif
-#endif
     logIndentDown();
-
     logInfoP("Setup0:");
     logIndentUp();
-    setupCustomFlash();
-    setupFrontPlate();
-    setupVoltageMeasurement();
-    setupConstantCurrentMode();
-    setupChannels();
     logIndentDown();
 }
 
@@ -60,67 +33,6 @@ void LedModule::setupChannels()
 {
     logDebugP("Setting up channels");
     logIndentUp();
-
-    memset(_SC_HWChannels, 0xFF, LED_SC_ChannelCount);
-    memset(_TW_HWChannels, 0xFF, LED_TW_ChannelCount * 2);
-    memset(_RGB_HWChannels, 0xFF, LED_RGB_ChannelCount * 3);
-
-    for (uint8_t _channelIndex = 0; _channelIndex < LED_ChannelCount; _channelIndex++)
-    {
-        switch (ParamLED_CH_Lighttype)
-        {
-            case LightType::Single:
-                _SC_HWChannels[ParamLED_CH_SC_Light - 1][0] = _channelIndex;
-                break;
-
-            case LightType::TunableWhite:
-                if (ParamLED_CH_TW_Function == 1)
-                {
-                    _TW_HWChannels[ParamLED_CH_TW_Light - 1][1] = _channelIndex;
-                }
-                else if (ParamLED_CH_TW_Function == 2)
-                {
-                    _TW_HWChannels[ParamLED_CH_TW_Light - 1][0] = _channelIndex;
-                }
-                break;
-
-            case LightType::RGB:
-                if (ParamLED_CH_RGB_Function == 1)
-                {
-                    _RGB_HWChannels[ParamLED_CH_RGB_Light - 1][0] = _channelIndex;
-                }
-                else if (ParamLED_CH_RGB_Function == 2)
-                {
-                    _RGB_HWChannels[ParamLED_CH_RGB_Light - 1][1] = _channelIndex;
-                }
-                else if (ParamLED_CH_RGB_Function == 3)
-                {
-                    _RGB_HWChannels[ParamLED_CH_RGB_Light - 1][2] = _channelIndex;
-                }
-                break;
-
-            // TODO: Add other light type implementations here
-            case LightType::RGBW:
-            case LightType::RGBTW:
-            default:
-                break;
-        }
-    }
-    for (uint8_t ch = 0; ch < LED_ChannelCount; ch++)
-    {
-        if (ch < LED_SC_ChannelCount)
-        {
-            _singleChannels[ch] = new SingleChannel(ch, _pDimmer, _SC_HWChannels[ch]);
-        }
-        if (ch < LED_TW_ChannelCount)
-        {
-            _twChannels[ch] = new TWChannel(ch, _pDimmer, _TW_HWChannels[ch]);
-        }
-        if (ch < LED_RGB_ChannelCount)
-        {
-            _rgbChannels[ch] = new RGBChannel(ch, _pDimmer, _RGB_HWChannels[ch]);
-        }
-    }
 
     logDebugP("Channel setup finished.");
     logIndentDown();
@@ -138,23 +50,6 @@ void LedModule::setupFrontPlate()
 #endif
 }
 
-void LedModule::setupVoltageMeasurement()
-{
-#ifdef LEDMODULE_VOLTAGE_MEASURE_PIN
-    pinMode(LEDMODULE_VOLTAGE_MEASURE_PIN, INPUT);
-    analogReadResolution(12);
-    logDebugP("Voltage Measurement: PIN: %u, resolution: %u bits", LEDMODULE_VOLTAGE_MEASURE_PIN, 12);
-#endif
-}
-
-void LedModule::setupConstantCurrentMode()
-{
-#ifdef LEDMODULE_DIM_TYPE_PIN
-    pinMode(LEDMODULE_DIM_TYPE_PIN, OUTPUT);
-    digitalWrite(LEDMODULE_DIM_TYPE_PIN, ParamLED_DimmerCcType); // HIGH = PWM-only, LOW = hybrid
-    logDebugP("Constant Current: PIN: %u, mode: %u", LEDMODULE_DIM_TYPE_PIN, ParamLED_DimmerCcType);
-#endif
-}
 
 void LedModule::setupCustomFlash()
 {
@@ -182,7 +77,7 @@ void LedModule::setupCustomFlash()
     // logIndentDown();
 }
 
-void LedModule::loop(bool configured)
+void OptolinkModule::loop(bool configured)
 {
     if (delayCheck(_timer1, 5100))
     {
@@ -190,79 +85,29 @@ void LedModule::loop(bool configured)
         _timer1 = millis();
     }
 
-#ifdef OPENKNX_LED_TEMPSENS_ADDR
-    if (ParamLED_TemperatureChangeSend)
-    {
-        float temperature = _temperature.readTemperatureC();
-        float temperatureDifference = abs(_lastTemperatureSent - temperature);
-        if (temperatureDifference > 0.01)
-        {
-            if (temperatureDifference >= _lastTemperatureSent * ParamLED_TemperatureMinChangePercent / 100.0f &&
-                temperatureDifference >= ParamLED_TemperatureMinChangeAbsolute)
-            {
-                KoLED_Temperature.value(temperature, DPT_Value_Temp);
-                _lastTemperatureSent = temperature;
-            }
-            else
-                KoLED_Temperature.valueNoSend(temperature, DPT_Value_Temp);
-        }
-
-        if (ParamLED_TemperatureCyclicTimeMS > 0 && delayCheck(_temperaturSendTimer, ParamLED_TemperatureCyclicTimeMS))
-        {
-            KoLED_Temperature.value(temperature, DPT_Value_Temp);
-            _lastTemperatureSent = temperature;
-            _temperaturSendTimer = delayTimerInit();
-        }
-    }
-#endif
-
     if (knx.configured())
     {
         if (delayCheck(_timerCheckConnection, 500))
         {
-            // If PWM side of the Adum1251 has no power and power returns, the PWM lib is not initialized
-            if (!_pDimmer->checkConnection())
-            {
-                if (_doResetPwm)
-                {
-                    _pDimmer->reconnect();
-                }
-            }
-            else
-            {
-                _doResetPwm = true;
-            }
             _timerCheckConnection = millis();
         }
+        CheckTimeoutInterval();
+        WartelisteAbarbeiten();
 
-        for (size_t i = 0; i < LED_SC_ChannelCount; i++)
-        {
-            _singleChannels[i]->loop();
-        }
 
-        for (size_t i = 0; i < LED_TW_ChannelCount; i++)
-        {
-            _twChannels[i]->loop();
-        }
-
-        for (size_t i = 0; i < LED_RGB_ChannelCount; i++)
-        {
-            _rgbChannels[i]->loop();
-        }
-
-        _pDimmer->loop();
+       
     }
 }
 
 #ifdef OPENKNX_DUALCORE
 
-void LedModule::setup1(bool configured)
+void OptolinkModule::setup1(bool configured)
 {
     delay(1000);
     logInfoP("Setup1");
 }
 
-void LedModule::loop1(bool configured)
+void OptolinkModule::loop1(bool configured)
 {
     if (delayCheck(_timer2, 7200))
     {
@@ -272,7 +117,7 @@ void LedModule::loop1(bool configured)
 }
 #endif
 
-void LedModule::processInputKo(GroupObject &ko)
+void OptolinkModule::processInputKo(GroupObject &ko)
 {
     // logDebugP("proc.Ko GA%04X", ko.asap());
     // logHexDebugP(ko.valueRef(), ko.valueSize());
@@ -300,7 +145,7 @@ void LedModule::processInputKo(GroupObject &ko)
     }
 }
 
-void LedModule::showHelp()
+void OptolinkModule::showHelp()
 {
     openknx.console.printHelpLine("led info", "Print ledModule configuration");
     openknx.console.printHelpLine("led state", "Print ledModule status");
@@ -308,7 +153,7 @@ void LedModule::showHelp()
     openknx.console.printHelpLine("led test mode", "Simple hardware test mode (currently RP2040 only)");
 }
 
-bool LedModule::processCommand(const std::string cmd, bool diagnoseKo)
+bool OptolinkModule::processCommand(const std::string cmd, bool diagnoseKo)
 {
     if (cmd.substr(0, 3) != "led")
         return false;
@@ -402,15 +247,36 @@ bool LedModule::processCommand(const std::string cmd, bool diagnoseKo)
     return false;
 }
 
-// If KNX power goes off, activate emergency light
-void LedModule::savePower()
+
+void OptolinkModule::CheckTimeoutInterval()
 {
-    for (uint8_t i = 0; i < LEDMODULE_MAX_LIGHT_CHANNELS; i++)
-    {
-        // TODO_KPA: Move to channel
-        //  uint8_t value = knx.paramByte(LED_SceneEmergency_LEDCH0 + i );
-        //  pwm.setPWM(i, 0, value);
-    }
+    for ( int i = 0 ; i<100 ; i++)
+        {
+        if ( IntervalTimer[i] + ParamTime[i] < millis() )
+            {
+            bool Test = 1;
+            uint8 Pos = 1
+            while Test do:
+                if ( Warteliste[Pos] == 0 )
+                {
+                Warteliste[Pos] = i;
+                Test=0; // springt aus while schleife
+                }
+            end:;
+            }
+        }        
 }
 
-LedModule openknxLedModule;
+void OptolinkModule::WartelisteAbarbeiten()
+{
+    wenn warteliste[1] != 0 dann
+        {
+        wenn kommunikation nicht aktiv dann 
+            {
+            nimm position 1 der liste und übergib es an den vitowifi(ParamAddr , ParamLenght)
+            for ( int i = 0 ; i<99 ; i++ )  {      Warteliste[i] = Warteliste[i+1]       }
+                }
+        }
+}
+
+OptolinkModule openknxOptolinkModule;
