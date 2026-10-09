@@ -1,7 +1,6 @@
 #include "OptolinkModule.h"
 #include "OpenKNX.h"
 
-
 const std::string OptolinkModule::name()
 {
     return OptolinkMODULE_HARDWARE_NAME;
@@ -50,7 +49,6 @@ void LedModule::setupFrontPlate()
 #endif
 }
 
-
 void LedModule::setupCustomFlash()
 {
     logDebugP("initialize ledModule flash");
@@ -93,9 +91,6 @@ void OptolinkModule::loop(bool configured)
         }
         CheckTimeoutInterval();
         WartelisteAbarbeiten();
-
-
-       
     }
 }
 
@@ -247,36 +242,32 @@ bool OptolinkModule::processCommand(const std::string cmd, bool diagnoseKo)
     return false;
 }
 
-
 void OptolinkModule::CheckTimeoutInterval()
 {
-    for ( int i = 0 ; i<100 ; i++)
+    for (int i = 0; i < 100; i++)
+    {
+        if (IntervalTimer[i] + ParamTime[i] < millis())
         {
-        if ( IntervalTimer[i] + ParamTime[i] < millis() )
-            {
             bool Test = 1;
-            uint8 Pos = 1
-            while Test do:
-                if ( Warteliste[Pos] == 0 )
-                {
+            uint8 Pos = 1 while Test do : if (Warteliste[Pos] == 0)
+            {
                 Warteliste[Pos] = i;
-                Test=0; // springt aus while schleife
-                }
-            end:;
+                Test = 0; // springt aus while schleife
             }
-        }        
+        end:;
+        }
+    }
 }
 
 void OptolinkModule::WartelisteAbarbeiten()
 {
     wenn warteliste[1] != 0 dann
+    {
+        wenn kommunikation nicht aktiv dann
         {
-        wenn kommunikation nicht aktiv dann 
-            {
-            nimm position 1 der liste und übergib es an den vitowifi(ParamAddr , ParamLenght)
-            for ( int i = 0 ; i<99 ; i++ )  {      Warteliste[i] = Warteliste[i+1]       }
-                }
+            nimm position 1 der liste und übergib es an den vitowifi(ParamAddr, ParamLenght) for (int i = 0; i < 99; i++) { Warteliste[i] = Warteliste[i + 1] }
         }
+    }
 }
 
 OptolinkModule openknxOptolinkModule;
