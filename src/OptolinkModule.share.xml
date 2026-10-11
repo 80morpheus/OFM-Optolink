@@ -74,7 +74,7 @@
 
           <Dynamic>
             <Channel Name="Optolink" Text="Optolink" Number="%PREFIX%" Id="%AID%_CH-%PREFIX%" HelpContext="Empty" >
-              <ParameterBlock Id="%AID%_PB-nnn" Name="Settings" Text="Allgemein" Icon="cog-outline" ShowInComObjectTree="true">
+              <ParameterBlock Id="%AID%_PB-nnn" Name="Settings" Text="Allgemein" Icon="fire" ShowInComObjectTree="true">
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="Optolink" UIHint="Headline" />
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="Version: %ModuleVersion%" />
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
@@ -89,9 +89,9 @@
               
                 <choose ParamRefId="%AID%_UP-%TT%00002_R-%TT%0000201"> <!-- Heater Type -->
                   <when test="1">
-                    <!--<ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable_200A" Text="Zuordnungstabelle_200A" Icon="cog-outline" ShowInComObjectTree="true">-->
+                    <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable_200A" Text="Zuordnungstabelle_200A" Icon="heat-pump" ShowInComObjectTree="true">
                     <op:include href="OptolinkModule_200A.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock/*" type="template" prefix="OPTO_200A" IsInner="true" />
-                    <!--</ParameterBlock>-->
+                    </ParameterBlock>
                   </when>
                   <when test="2">
                     <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable_250A" Text="Zuordnungstabelle_250A" Icon="cog-outline" ShowInComObjectTree="true">

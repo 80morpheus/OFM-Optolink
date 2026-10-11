@@ -250,123 +250,112 @@
                     <Row Id="%AID%_PB-nnn_R-1" />
                   </Rows>
                   <Columns>
-                    <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="4%" />
-                    <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="45%" />
-                    <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="26%" />
-                    <Column Id="%AID%_PB-nnn_C-4" Name="Col4" Width="25%" />
+                    <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="5%" />
+                    <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="65%" />
+                    <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="15%" />
+                    <Column Id="%AID%_PB-nnn_C-4" Name="Col4" Width="15%" />
                   </Columns>
                   <ParameterSeparator Id="%AID%_PS-nnn" Cell="1,2" Text="Parameter" UIHint="Headline" />
                   <ParameterSeparator Id="%AID%_PS-nnn" Cell="1,3" Text="Aktiv" UIHint="Headline" />
                   <ParameterSeparator Id="%AID%_PS-nnn" Cell="1,4" Text="Zeitinterval" UIHint="Headline" />
                 </ParameterBlock>
-                <!-- Table content -->                
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" Cell="2,2" />
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="Warmwasser" UIHint="Headline" Cell="3,2" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%001_R-21%CC%00101" Cell="4,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%001_R-21%CC%00101" Cell="4,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%001_R-21%CC%00101" Cell="4,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%002_R-21%CC%00201" Cell="5,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%002_R-21%CC%00201" Cell="5,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%002_R-21%CC%00201" Cell="5,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%003_R-21%CC%00301" Cell="6,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%003_R-21%CC%00301" Cell="6,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%003_R-21%CC%00301" Cell="6,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%004_R-21%CC%00401" Cell="7,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%004_R-21%CC%00401" Cell="7,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%004_R-21%CC%00401" Cell="7,4" />
+                <!-- Table content -->    
+                <ParameterBlock Id="%AID%_PB-nnn" Inline="true" Layout="Grid" >
+                  <Rows>
+                    <Row Id="%AID%_PB-nnn_R-2" />
+                    <Row Id="%AID%_PB-nnn_R-3" />
+                    <Row Id="%AID%_PB-nnn_R-4" />
+                    <Row Id="%AID%_PB-nnn_R-5" />
+                    <Row Id="%AID%_PB-nnn_R-6" />
+                    <Row Id="%AID%_PB-nnn_R-7" />
+                    <Row Id="%AID%_PB-nnn_R-8" />
+                    <Row Id="%AID%_PB-nnn_R-9" />
+                    <Row Id="%AID%_PB-nnn_R-10" />
+                    <Row Id="%AID%_PB-nnn_R-11" />
+                    <Row Id="%AID%_PB-nnn_R-12" />
+                    <Row Id="%AID%_PB-nnn_R-13" />
+                    <Row Id="%AID%_PB-nnn_R-14" />
+                    <Row Id="%AID%_PB-nnn_R-15" />
+                    <Row Id="%AID%_PB-nnn_R-16" />
+                    <Row Id="%AID%_PB-nnn_R-17" />
+                    <Row Id="%AID%_PB-nnn_R-18" />
+                    <Row Id="%AID%_PB-nnn_R-19" />
+                    <Row Id="%AID%_PB-nnn_R-20" />
+                    <Row Id="%AID%_PB-nnn_R-21" />
+                    <Row Id="%AID%_PB-nnn_R-22" />
+                    <Row Id="%AID%_PB-nnn_R-23" />
+                    <Row Id="%AID%_PB-nnn_R-24" />
+                    <Row Id="%AID%_PB-nnn_R-25" />
+                    <Row Id="%AID%_PB-nnn_R-26" />
+                    <Row Id="%AID%_PB-nnn_R-27" />
+                    <Row Id="%AID%_PB-nnn_R-28" />
+                    <Row Id="%AID%_PB-nnn_R-29" />
+                    <Row Id="%AID%_PB-nnn_R-30" />
+                    <Row Id="%AID%_PB-nnn_R-31" />
+                    <Row Id="%AID%_PB-nnn_R-32" />
+                    <Row Id="%AID%_PB-nnn_R-33" />
+                    <Row Id="%AID%_PB-nnn_R-34" />
+                    <Row Id="%AID%_PB-nnn_R-35" />
+                    <Row Id="%AID%_PB-nnn_R-36" />
+                    <Row Id="%AID%_PB-nnn_R-37" />
+                    <Row Id="%AID%_PB-nnn_R-38" />
+                    <Row Id="%AID%_PB-nnn_R-39" />
+                    <Row Id="%AID%_PB-nnn_R-40" />
+                  </Rows>
+                  <Columns>
+                    <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="5%" />
+                    <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="65%" />
+                    <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="15%" />
+                    <Column Id="%AID%_PB-nnn_C-4" Name="Col4" Width="15%" />
+                  </Columns>            
+                  
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Warmwasser" UIHint="Headline" Cell="3,2" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="WW Oben"                      Cell="4,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%001_R-21%CC%00101"              Cell="4,3" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%101_R-21%CC%10101"              Cell="4,4" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="WW Unten"                     Cell="5,2"            /> 
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%002_R-21%CC%00201"              Cell="5,3" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%102_R-21%CC%10201"              Cell="5,4" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="WW Soll"                      Cell="6,2" /> 
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%003_R-21%CC%00301"              Cell="6,3" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%103_R-21%CC%10301"              Cell="6,4" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Außentemperatur"              Cell="7,2" /> 
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%004_R-21%CC%00401"              Cell="7,3" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%104_R-21%CC%10401"              Cell="7,4" />
+                
               
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" Cell="8,2" />
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="Energie" UIHint="Headline" Cell="9,2" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%005_R-21%CC%00501" Cell="9,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%005_R-21%CC%00501" Cell="9,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%005_R-21%CC%00501" Cell="9,4" />              
-                <ParameterSeparator RefId="%AID%_UP-21%CC%006_R-21%CC%00601" Cell="10,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%006_R-21%CC%00601" Cell="10,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%006_R-21%CC%00601" Cell="10,4" />              
-                <ParameterSeparator RefId="%AID%_UP-21%CC%007_R-21%CC%00701" Cell="11,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%007_R-21%CC%00701" Cell="11,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%007_R-21%CC%00701" Cell="11,4" />              
-                <ParameterSeparator RefId="%AID%_UP-21%CC%008_R-21%CC%00801" Cell="12,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%008_R-21%CC%00801" Cell="12,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%008_R-21%CC%00801" Cell="12,4" />              
-                <ParameterSeparator RefId="%AID%_UP-21%CC%009_R-21%CC%00901" Cell="13,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%009_R-21%CC%00901" Cell="13,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%009_R-21%CC%00901" Cell="13,4" />              
-                <ParameterSeparator RefId="%AID%_UP-21%CC%010_R-21%CC%01001" Cell="14,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%010_R-21%CC%01001" Cell="14,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%010_R-21%CC%01001" Cell="14,4" />              
-                <ParameterSeparator RefId="%AID%_UP-21%CC%011_R-21%CC%01101" Cell="15,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%011_R-21%CC%01101" Cell="15,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%011_R-21%CC%01101" Cell="15,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%012_R-21%CC%01201" Cell="16,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%012_R-21%CC%01201" Cell="16,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%012_R-21%CC%01201" Cell="16,4" />
-              
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" Cell="17,2" />
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="Wärmepumpe" UIHint="Headline" Cell="18,2" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%013_R-21%CC%01301" Cell="19,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%013_R-21%CC%01301" Cell="19,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%013_R-21%CC%01301" Cell="19,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%014_R-21%CC%01401" Cell="20,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%014_R-21%CC%01401" Cell="20,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%014_R-21%CC%01401" Cell="20,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%015_R-21%CC%01501" Cell="21,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%015_R-21%CC%01501" Cell="21,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%015_R-21%CC%01501" Cell="21,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%016_R-21%CC%01601" Cell="22,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%016_R-21%CC%01601" Cell="22,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%016_R-21%CC%01601" Cell="22,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%017_R-21%CC%01701" Cell="23,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%017_R-21%CC%01701" Cell="23,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%017_R-21%CC%01701" Cell="23,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%018_R-21%CC%01801" Cell="24,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%018_R-21%CC%01801" Cell="24,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%018_R-21%CC%01801" Cell="24,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%019_R-21%CC%01901" Cell="25,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%019_R-21%CC%01901" Cell="25,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%019_R-21%CC%01901" Cell="25,4" />              
-                <ParameterSeparator RefId="%AID%_UP-21%CC%020_R-21%CC%02001" Cell="26,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%020_R-21%CC%02001" Cell="26,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%020_R-21%CC%02001" Cell="26,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%021_R-21%CC%02101" Cell="27,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%021_R-21%CC%02101" Cell="27,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%021_R-21%CC%02101" Cell="27,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%022_R-21%CC%02201" Cell="28,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%022_R-21%CC%02201" Cell="28,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%022_R-21%CC%02201" Cell="28,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%023_R-21%CC%02301" Cell="29,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%023_R-21%CC%02301" Cell="29,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%023_R-21%CC%02301" Cell="29,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%024_R-21%CC%02401" Cell="30,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%024_R-21%CC%02401" Cell="30,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%024_R-21%CC%02401" Cell="30,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%025_R-21%CC%02501" Cell="31,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%025_R-21%CC%02501" Cell="31,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%025_R-21%CC%02501" Cell="31,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%026_R-21%CC%02601" Cell="32,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%026_R-21%CC%02601" Cell="32,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%026_R-21%CC%02601" Cell="32,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%027_R-21%CC%02701" Cell="33,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%027_R-21%CC%02701" Cell="33,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%027_R-21%CC%02701" Cell="33,4" />
+                  
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Energie" UIHint="Headline"    Cell="8,2" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="FaktorEnergie"                Cell="9,2"  />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%005_R-21%CC%00501"              Cell="9,3" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%105_R-21%CC%10501"              Cell="9,4" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="HeizWärmeHeizung"             Cell="10,2" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%006_R-21%CC%00601"              Cell="10,3" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%106_R-21%CC%10601"              Cell="10,4" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="HeizWärmeWarmwasser"          Cell="11,2" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%007_R-21%CC%00701"              Cell="11,3" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%107_R-21%CC%10701"              Cell="11,4" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="EnergieHeizung"               Cell="12,2" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%008_R-21%CC%00801"              Cell="12,3" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%108_R-21%CC%10801"              Cell="12,4" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="EnergieWarmwasser"            Cell="13,2" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%009_R-21%CC%00901"              Cell="13,3" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%109_R-21%CC%10901"              Cell="13,4" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="JAZges"                       Cell="14,2" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%010_R-21%CC%01001"              Cell="14,3" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%110_R-21%CC%11001"              Cell="14,4" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="JAZHE"                        Cell="15,2" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%011_R-21%CC%01101"              Cell="15,3" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%111_R-21%CC%11101"              Cell="15,4" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="JAZWW"                        Cell="16,2" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%012_R-21%CC%01201"              Cell="16,3" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%112_R-21%CC%11201"              Cell="16,4" />
 
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" Cell="34,2" />
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreise" UIHint="Headline" Cell="35,2" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%028_R-21%CC%02801" Cell="36,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%028_R-21%CC%02801" Cell="36,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%028_R-21%CC%02801" Cell="36,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%029_R-21%CC%02901" Cell="37,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%029_R-21%CC%02901" Cell="37,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%029_R-21%CC%02901" Cell="37,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%030_R-21%CC%03001" Cell="38,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%030_R-21%CC%03001" Cell="38,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%030_R-21%CC%03001" Cell="38,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%031_R-21%CC%03101" Cell="39,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%031_R-21%CC%03101" Cell="39,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%031_R-21%CC%03101" Cell="39,4" />
-                <ParameterSeparator RefId="%AID%_UP-21%CC%032_R-21%CC%03201" Cell="40,2" />  
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%032_R-21%CC%03201" Cell="40,3" />
-                <ParameterRefRef    RefId="%AID%_UP-21%CC%032_R-21%CC%03201" Cell="40,4" />
+
+
+
+                </ParameterBlock>
+                
               
               </ParameterBlock>
 
