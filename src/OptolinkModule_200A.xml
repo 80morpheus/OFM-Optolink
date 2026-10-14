@@ -11,7 +11,7 @@
             </ParameterTypes>
 
             <Parameters>
-              <Union SizeInBit="264">
+              <Union SizeInBit="280">
                 <Memory CodeSegment="%AID%_RS-04-00000" Offset="0" BitOffset="0" />
                 <Parameter Id="%AID%_UP-21%CC%001" Name="CH%C%_active_WWOben"                   ParameterType="%AID%_PT-CheckBox"       Offset="0"   BitOffset="0" Text="WWOben"               Value="0" />
                 <Parameter Id="%AID%_UP-21%CC%002" Name="CH%C%_active_WWUnten"                  ParameterType="%AID%_PT-CheckBox"       Offset="1"   BitOffset="0" Text="WWUnten"              Value="0" />
@@ -35,24 +35,26 @@
                 <Parameter Id="%AID%_UP-21%CC%018" Name="CH%C%_active_PrimRL"                   ParameterType="%AID%_PT-CheckBox"       Offset="17"  BitOffset="0" Text="PrimRL"               Value="0" />
                 <Parameter Id="%AID%_UP-21%CC%019" Name="CH%C%_active_LüfterSt"                 ParameterType="%AID%_PT-CheckBox"       Offset="18"  BitOffset="0" Text="LüfterStatus"         Value="0" />
                 <Parameter Id="%AID%_UP-21%CC%020" Name="CH%C%_active_LüfterProzatus"           ParameterType="%AID%_PT-CheckBox"       Offset="19"  BitOffset="0" Text="LüfterProz"           Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%021" Name="CH%C%_active_Sauggas"                  ParameterType="%AID%_PT-CheckBox"       Offset="20"  BitOffset="0" Text="Sauggas"              Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%022" Name="CH%C%_active_Heissgas"                 ParameterType="%AID%_PT-CheckBox"       Offset="21"  BitOffset="0" Text="Heissgas"             Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%023" Name="CH%C%_active_SekPumpeStatus"           ParameterType="%AID%_PT-CheckBox"       Offset="22"  BitOffset="0" Text="SekPumpeStatus"       Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%024" Name="CH%C%_active_SekPumpeProz"             ParameterType="%AID%_PT-CheckBox"       Offset="23"  BitOffset="0" Text="SekPumpeProz"         Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%025" Name="CH%C%_active_SekVorlauf"               ParameterType="%AID%_PT-CheckBox"       Offset="24"  BitOffset="0" Text="SekVorlauf"           Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%026" Name="CH%C%_active_SekRuecklauf"             ParameterType="%AID%_PT-CheckBox"       Offset="25"  BitOffset="0" Text="SekRuecklauf"         Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%027" Name="CH%C%_active_HeizSpeicher"             ParameterType="%AID%_PT-CheckBox"       Offset="26"  BitOffset="0" Text="HeizSpeicher"         Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%021" Name="CH%C%_active_SauggasTemp"              ParameterType="%AID%_PT-CheckBox"       Offset="20"  BitOffset="0" Text="SauggasTemp"          Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%022" Name="CH%C%_active_SauggasDruck"             ParameterType="%AID%_PT-CheckBox"       Offset="21"  BitOffset="0" Text="SauggasDruck"         Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%023" Name="CH%C%_active_HeissgasTemp"             ParameterType="%AID%_PT-CheckBox"       Offset="22"  BitOffset="0" Text="HeissgasTemp"         Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%024" Name="CH%C%_active_HeissgasDruck"            ParameterType="%AID%_PT-CheckBox"       Offset="23"  BitOffset="0" Text="HeissgasDruck"        Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%025" Name="CH%C%_active_SekPumpeStatus"           ParameterType="%AID%_PT-CheckBox"       Offset="24"  BitOffset="0" Text="SekPumpeStatus"       Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%026" Name="CH%C%_active_SekPumpeProz"             ParameterType="%AID%_PT-CheckBox"       Offset="25"  BitOffset="0" Text="SekPumpeProz"         Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%027" Name="CH%C%_active_SekVorlauf"               ParameterType="%AID%_PT-CheckBox"       Offset="26"  BitOffset="0" Text="SekVorlauf"           Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%028" Name="CH%C%_active_SekRuecklauf"             ParameterType="%AID%_PT-CheckBox"       Offset="27"  BitOffset="0" Text="SekRuecklauf"         Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%029" Name="CH%C%_active_HeizSpeicher"             ParameterType="%AID%_PT-CheckBox"       Offset="28"  BitOffset="0" Text="HeizSpeicher"         Value="0" />
                 
-                <Parameter Id="%AID%_UP-21%CC%028" Name="CH%C%_active_HK2VL"                    ParameterType="%AID%_PT-CheckBox"       Offset="27"  BitOffset="0" Text="HK2VL"                Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%029" Name="CH%C%_active_HK2niveau"                ParameterType="%AID%_PT-CheckBox"       Offset="28"  BitOffset="0" Text="HK2niveau"            Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%030" Name="CH%C%_active_HK2level"                 ParameterType="%AID%_PT-CheckBox"       Offset="29"  BitOffset="0" Text="HK2level"             Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%031" Name="CH%C%_active_HK3VL"                    ParameterType="%AID%_PT-CheckBox"       Offset="30"  BitOffset="0" Text="HK3VL"                Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%032" Name="CH%C%_active_HK3niveau"                ParameterType="%AID%_PT-CheckBox"       Offset="31"  BitOffset="0" Text="HK3niveau"            Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%033" Name="CH%C%_active_HK3level"                 ParameterType="%AID%_PT-CheckBox"       Offset="32"  BitOffset="0" Text="HK3level"             Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%030" Name="CH%C%_active_HK2VL"                    ParameterType="%AID%_PT-CheckBox"       Offset="29"  BitOffset="0" Text="HK2VL"                Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%031" Name="CH%C%_active_HK2niveau"                ParameterType="%AID%_PT-CheckBox"       Offset="30"  BitOffset="0" Text="HK2niveau"            Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%032" Name="CH%C%_active_HK2level"                 ParameterType="%AID%_PT-CheckBox"       Offset="31"  BitOffset="0" Text="HK2level"             Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%033" Name="CH%C%_active_HK3VL"                    ParameterType="%AID%_PT-CheckBox"       Offset="32"  BitOffset="0" Text="HK3VL"                Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%034" Name="CH%C%_active_HK3niveau"                ParameterType="%AID%_PT-CheckBox"       Offset="33"  BitOffset="0" Text="HK3niveau"            Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%035" Name="CH%C%_active_HK3level"                 ParameterType="%AID%_PT-CheckBox"       Offset="34"  BitOffset="0" Text="HK3level"             Value="0" />
                 
               </Union>
               
-              <Union SizeInBit="3088">
+              <Union SizeInBit="3280">
                 <Memory CodeSegment="%AID%_RS-04-00000" Offset="100" BitOffset="0" />
                 <Parameter Id="%AID%_UP-21%CC%101" Name="CH%C%_time_WWOben"                   ParameterType="%AID%_PT-IntervalTime"       Offset="0"    BitOffset="0" Text="WWOben"               Value="4095" />
                 <Parameter Id="%AID%_UP-21%CC%102" Name="CH%C%_time_WWUnten"                  ParameterType="%AID%_PT-IntervalTime"       Offset="12"   BitOffset="0" Text="WWUnten"              Value="4095" />
@@ -77,21 +79,21 @@
                 <Parameter Id="%AID%_UP-21%CC%119" Name="CH%C%_time_LüfterSt"                 ParameterType="%AID%_PT-IntervalTime"       Offset="216"  BitOffset="0" Text="LüfterStatus"         Value="4095" />
                 <Parameter Id="%AID%_UP-21%CC%120" Name="CH%C%_time_LüfterProzatus"           ParameterType="%AID%_PT-IntervalTime"       Offset="228"  BitOffset="0" Text="LüfterProz"           Value="4095" />
                 <Parameter Id="%AID%_UP-21%CC%121" Name="CH%C%_time_SauggasTemp"              ParameterType="%AID%_PT-IntervalTime"       Offset="240"  BitOffset="0" Text="Sauggas Temperatur"   Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%121" Name="CH%C%_time_SauggasDruck"             ParameterType="%AID%_PT-IntervalTime"       Offset="252"  BitOffset="0" Text="Sauggas Druck"        Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%122" Name="CH%C%_time_HeissgasTemp"             ParameterType="%AID%_PT-IntervalTime"       Offset="264"  BitOffset="0" Text="Heissgas Temperatur"  Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%122" Name="CH%C%_time_HeissgasDruck"            ParameterType="%AID%_PT-IntervalTime"       Offset="276"  BitOffset="0" Text="Heissgas Druck"       Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%123" Name="CH%C%_time_SekPumpeStatus"           ParameterType="%AID%_PT-IntervalTime"       Offset="288"  BitOffset="0" Text="SekPumpeStatus"       Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%124" Name="CH%C%_time_SekPumpeProz"             ParameterType="%AID%_PT-IntervalTime"       Offset="300"  BitOffset="0" Text="SekPumpeProz"         Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%125" Name="CH%C%_time_SekVorlauf"               ParameterType="%AID%_PT-IntervalTime"       Offset="312"  BitOffset="0" Text="SekVorlauf"           Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%126" Name="CH%C%_time_SekRuecklauf"             ParameterType="%AID%_PT-IntervalTime"       Offset="324"  BitOffset="0" Text="SekRuecklauf"         Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%127" Name="CH%C%_time_HeizSpeicher"             ParameterType="%AID%_PT-IntervalTime"       Offset="336"  BitOffset="0" Text="HeizSpeicher"         Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%122" Name="CH%C%_time_SauggasDruck"             ParameterType="%AID%_PT-IntervalTime"       Offset="252"  BitOffset="0" Text="Sauggas Druck"        Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%123" Name="CH%C%_time_HeissgasTemp"             ParameterType="%AID%_PT-IntervalTime"       Offset="264"  BitOffset="0" Text="Heissgas Temperatur"  Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%124" Name="CH%C%_time_HeissgasDruck"            ParameterType="%AID%_PT-IntervalTime"       Offset="276"  BitOffset="0" Text="Heissgas Druck"       Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%125" Name="CH%C%_time_SekPumpeStatus"           ParameterType="%AID%_PT-IntervalTime"       Offset="288"  BitOffset="0" Text="SekPumpeStatus"       Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%126" Name="CH%C%_time_SekPumpeProz"             ParameterType="%AID%_PT-IntervalTime"       Offset="300"  BitOffset="0" Text="SekPumpeProz"         Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%127" Name="CH%C%_time_SekVorlauf"               ParameterType="%AID%_PT-IntervalTime"       Offset="312"  BitOffset="0" Text="SekVorlauf"           Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%128" Name="CH%C%_time_SekRuecklauf"             ParameterType="%AID%_PT-IntervalTime"       Offset="324"  BitOffset="0" Text="SekRuecklauf"         Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%129" Name="CH%C%_time_HeizSpeicher"             ParameterType="%AID%_PT-IntervalTime"       Offset="336"  BitOffset="0" Text="HeizSpeicher"         Value="4095" />
                 
-                <Parameter Id="%AID%_UP-21%CC%128" Name="CH%C%_time_HK2VL"                    ParameterType="%AID%_PT-IntervalTime"       Offset="348"  BitOffset="0" Text="HK2VL"                Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%129" Name="CH%C%_time_HK2niveau"                ParameterType="%AID%_PT-IntervalTime"       Offset="360"  BitOffset="0" Text="HK2niveau"            Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%130" Name="CH%C%_time_HK2level"                 ParameterType="%AID%_PT-IntervalTime"       Offset="372"  BitOffset="0" Text="HK2level"             Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%131" Name="CH%C%_time_HK3VL"                    ParameterType="%AID%_PT-IntervalTime"       Offset="384"  BitOffset="0" Text="HK3VL"                Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%132" Name="CH%C%_time_HK3niveau"                ParameterType="%AID%_PT-IntervalTime"       Offset="396"  BitOffset="0" Text="HK3niveau"            Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%133" Name="CH%C%_time_HK3level"                 ParameterType="%AID%_PT-IntervalTime"       Offset="408"  BitOffset="0" Text="HK3level"             Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%130" Name="CH%C%_time_HK2VL"                    ParameterType="%AID%_PT-IntervalTime"       Offset="348"  BitOffset="0" Text="HK2VL"                Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%131" Name="CH%C%_time_HK2niveau"                ParameterType="%AID%_PT-IntervalTime"       Offset="360"  BitOffset="0" Text="HK2niveau"            Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%132" Name="CH%C%_time_HK2level"                 ParameterType="%AID%_PT-IntervalTime"       Offset="372"  BitOffset="0" Text="HK2level"             Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%133" Name="CH%C%_time_HK3VL"                    ParameterType="%AID%_PT-IntervalTime"       Offset="384"  BitOffset="0" Text="HK3VL"                Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%134" Name="CH%C%_time_HK3niveau"                ParameterType="%AID%_PT-IntervalTime"       Offset="396"  BitOffset="0" Text="HK3niveau"            Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%135" Name="CH%C%_time_HK3level"                 ParameterType="%AID%_PT-IntervalTime"       Offset="408"  BitOffset="0" Text="HK3level"             Value="4095" />
                 
               </Union>
               
@@ -131,6 +133,8 @@
               <ParameterRef Id="%AID%_UP-21%CC%031_R-21%CC%03101" RefId="%AID%_UP-21%CC%031" />
               <ParameterRef Id="%AID%_UP-21%CC%032_R-21%CC%03201" RefId="%AID%_UP-21%CC%032" />
               <ParameterRef Id="%AID%_UP-21%CC%033_R-21%CC%03301" RefId="%AID%_UP-21%CC%033" />
+              <ParameterRef Id="%AID%_UP-21%CC%034_R-21%CC%03401" RefId="%AID%_UP-21%CC%034" />
+              <ParameterRef Id="%AID%_UP-21%CC%035_R-21%CC%03501" RefId="%AID%_UP-21%CC%035" />
 
               <ParameterRef Id="%AID%_UP-21%CC%101_R-21%CC%10101" RefId="%AID%_UP-21%CC%101" />
               <ParameterRef Id="%AID%_UP-21%CC%102_R-21%CC%10201" RefId="%AID%_UP-21%CC%102" />

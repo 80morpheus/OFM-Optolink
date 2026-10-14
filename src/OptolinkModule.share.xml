@@ -89,17 +89,17 @@
               
                 <choose ParamRefId="%AID%_UP-%TT%00002_R-%TT%0000201"> <!-- Heater Type -->
                   <when test="1">
-                    <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable_200A" Text="Zuordnungstabelle_200A" Icon="heat-pump" ShowInComObjectTree="true">
+                    <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable_200A" Text="Parameterabfrage 200A" Icon="heat-pump" ShowInComObjectTree="true">
                     <op:include href="OptolinkModule_200A.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock/*" type="template" prefix="OPTO_200A" IsInner="true" />
                     </ParameterBlock>
                   </when>
                   <when test="2">
-                    <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable_250A" Text="Zuordnungstabelle_250A" Icon="cog-outline" ShowInComObjectTree="true">
+                    <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable_250A" Text="Parameterabfrage 250A" Icon="cog-outline" ShowInComObjectTree="true">
                     <!--<op:include href="OptolinkModule_250A.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock[@Name='AssignmentTable_250A']/*" prefix="OPTO" type="template" IsInner="true" />--> 
                   </ParameterBlock>
                   </when>
                   <when test="3">
-                    <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable_300A" Text="Zuordnungstabelle_300A" Icon="cog-outline" ShowInComObjectTree="true">
+                    <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable_300A" Text="Parameterabfrage 300A" Icon="cog-outline" ShowInComObjectTree="true">
                     <!--<op:include href="OptolinkModule_300A.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock[@Name='AssignmentTable_300A']/*" prefix="OPTO" type="template" IsInner="true" />-->
                     </ParameterBlock>
                   </when>
