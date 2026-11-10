@@ -6,100 +6,105 @@
       <ApplicationPrograms>
         <ApplicationProgram>
           <Static>
-            
+            <Script>
+              <op:include href="OptolinkModule_200A.script.js" prefix="OPTO" type="script" />
+            </Script>
             <ParameterTypes>
             </ParameterTypes>
 
             <Parameters>
-              <Union SizeInBit="280">
+              <Union SizeInBit="40">
                 <Memory CodeSegment="%AID%_RS-04-00000" Offset="0" BitOffset="0" />
-                <Parameter Id="%AID%_UP-21%CC%001" Name="CH%C%_active_WWOben"                   ParameterType="%AID%_PT-CheckBox"       Offset="0"   BitOffset="0" Text="WWOben"               Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%002" Name="CH%C%_active_WWUnten"                  ParameterType="%AID%_PT-CheckBox"       Offset="1"   BitOffset="0" Text="WWUnten"              Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%003" Name="CH%C%_active_WWSoll"                   ParameterType="%AID%_PT-CheckBox"       Offset="2"   BitOffset="0" Text="WWSoll"               Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%004" Name="CH%C%_active_AussenTemp"               ParameterType="%AID%_PT-CheckBox"       Offset="3"   BitOffset="0" Text="AussenTemp"           Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%000" Name="active_WWOben"                   ParameterType="%AID%_PT-CheckBox"       Offset="0"   BitOffset="0" Text="WWOben"               Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%001" Name="active_WWUnten"                  ParameterType="%AID%_PT-CheckBox"       Offset="0"   BitOffset="1" Text="WWUnten"              Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%002" Name="active_WWSoll"                   ParameterType="%AID%_PT-CheckBox"       Offset="0"   BitOffset="2" Text="WWSoll"               Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%003" Name="active_Warmwasserbereitung"      ParameterType="%AID%_PT-CheckBox"       Offset="0"   BitOffset="3" Text="Warmwasserbereitung"  Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%004" Name="active_AussenTemp"               ParameterType="%AID%_PT-CheckBox"       Offset="0"   BitOffset="4" Text="AussenTemp"           Value="0" />
 
-                <Parameter Id="%AID%_UP-21%CC%005" Name="CH%C%_active_FaktorEnergie"            ParameterType="%AID%_PT-CheckBox"       Offset="4"   BitOffset="0" Text="FaktorEnergie"        Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%006" Name="CH%C%_active_HeizWärmeHeizung"         ParameterType="%AID%_PT-CheckBox"       Offset="5"   BitOffset="0" Text="HeizWärmeHeizung"     Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%007" Name="CH%C%_active_HeizWärmeWarmwasser"      ParameterType="%AID%_PT-CheckBox"       Offset="6"   BitOffset="0" Text="HeizWärmeWarmwasser"  Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%008" Name="CH%C%_active_EnergieHeizung"           ParameterType="%AID%_PT-CheckBox"       Offset="7"   BitOffset="0" Text="EnergieHeizung"       Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%009" Name="CH%C%_active_EnergieWarmwasser"        ParameterType="%AID%_PT-CheckBox"       Offset="8"   BitOffset="0" Text="EnergieWarmwasser"    Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%010" Name="CH%C%_active_JAZges"                   ParameterType="%AID%_PT-CheckBox"       Offset="9"   BitOffset="0" Text="JAZges"               Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%011" Name="CH%C%_active_JAZhe"                    ParameterType="%AID%_PT-CheckBox"       Offset="10"  BitOffset="0" Text="JAZhe"                Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%012" Name="CH%C%_active_JAZww"                    ParameterType="%AID%_PT-CheckBox"       Offset="11"  BitOffset="0" Text="JAZww"                Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%005" Name="active_FaktorEnergie"            ParameterType="%AID%_PT-CheckBox"       Offset="1"   BitOffset="4" Text="FaktorEnergie"        Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%006" Name="active_HeizWärmeHeizung"         ParameterType="%AID%_PT-CheckBox"       Offset="1"   BitOffset="5" Text="HeizWärmeHeizung"     Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%007" Name="active_HeizWärmeWarmwasser"      ParameterType="%AID%_PT-CheckBox"       Offset="1"   BitOffset="6" Text="HeizWärmeWarmwasser"  Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%008" Name="active_EnergieHeizung"           ParameterType="%AID%_PT-CheckBox"       Offset="1"   BitOffset="7" Text="EnergieHeizung"       Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%009" Name="active_EnergieWarmwasser"        ParameterType="%AID%_PT-CheckBox"       Offset="1"   BitOffset="0" Text="EnergieWarmwasser"    Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%010" Name="active_JAZges"                   ParameterType="%AID%_PT-CheckBox"       Offset="1"   BitOffset="1" Text="JAZges"               Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%011" Name="active_JAZhe"                    ParameterType="%AID%_PT-CheckBox"       Offset="1"   BitOffset="2" Text="JAZhe"                Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%012" Name="active_JAZww"                    ParameterType="%AID%_PT-CheckBox"       Offset="1"   BitOffset="3" Text="JAZww"                Value="0" />
                 
-                <Parameter Id="%AID%_UP-21%CC%013" Name="CH%C%_active_VerdichterStatus"         ParameterType="%AID%_PT-CheckBox"       Offset="12"  BitOffset="0" Text="VerdichterStatus"     Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%014" Name="CH%C%_active_VerdichterProz"           ParameterType="%AID%_PT-CheckBox"       Offset="13"  BitOffset="0" Text="VerdichterProz"       Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%015" Name="CH%C%_active_KaelteUmkehr"             ParameterType="%AID%_PT-CheckBox"       Offset="14"  BitOffset="0" Text="KaelteUmkehr"         Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%016" Name="CH%C%_active_ECV"                      ParameterType="%AID%_PT-CheckBox"       Offset="15"  BitOffset="0" Text="ECV"                  Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%017" Name="CH%C%_active_PrimVL"                   ParameterType="%AID%_PT-CheckBox"       Offset="16"  BitOffset="0" Text="PrimVL"               Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%018" Name="CH%C%_active_PrimRL"                   ParameterType="%AID%_PT-CheckBox"       Offset="17"  BitOffset="0" Text="PrimRL"               Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%019" Name="CH%C%_active_LüfterSt"                 ParameterType="%AID%_PT-CheckBox"       Offset="18"  BitOffset="0" Text="LüfterStatus"         Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%020" Name="CH%C%_active_LüfterProzatus"           ParameterType="%AID%_PT-CheckBox"       Offset="19"  BitOffset="0" Text="LüfterProz"           Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%021" Name="CH%C%_active_SauggasTemp"              ParameterType="%AID%_PT-CheckBox"       Offset="20"  BitOffset="0" Text="SauggasTemp"          Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%022" Name="CH%C%_active_SauggasDruck"             ParameterType="%AID%_PT-CheckBox"       Offset="21"  BitOffset="0" Text="SauggasDruck"         Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%023" Name="CH%C%_active_HeissgasTemp"             ParameterType="%AID%_PT-CheckBox"       Offset="22"  BitOffset="0" Text="HeissgasTemp"         Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%024" Name="CH%C%_active_HeissgasDruck"            ParameterType="%AID%_PT-CheckBox"       Offset="23"  BitOffset="0" Text="HeissgasDruck"        Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%025" Name="CH%C%_active_SekPumpeStatus"           ParameterType="%AID%_PT-CheckBox"       Offset="24"  BitOffset="0" Text="SekPumpeStatus"       Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%026" Name="CH%C%_active_SekPumpeProz"             ParameterType="%AID%_PT-CheckBox"       Offset="25"  BitOffset="0" Text="SekPumpeProz"         Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%027" Name="CH%C%_active_SekVorlauf"               ParameterType="%AID%_PT-CheckBox"       Offset="26"  BitOffset="0" Text="SekVorlauf"           Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%028" Name="CH%C%_active_SekRuecklauf"             ParameterType="%AID%_PT-CheckBox"       Offset="27"  BitOffset="0" Text="SekRuecklauf"         Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%029" Name="CH%C%_active_HeizSpeicher"             ParameterType="%AID%_PT-CheckBox"       Offset="28"  BitOffset="0" Text="HeizSpeicher"         Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%013" Name="active_VerdichterStatus"         ParameterType="%AID%_PT-CheckBox"       Offset="2"   BitOffset="4" Text="VerdichterStatus"     Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%014" Name="active_VerdichterProz"           ParameterType="%AID%_PT-CheckBox"       Offset="2"   BitOffset="5" Text="VerdichterProz"       Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%015" Name="active_KaelteUmkehr"             ParameterType="%AID%_PT-CheckBox"       Offset="2"   BitOffset="6" Text="KaelteUmkehr"         Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%016" Name="active_ECV"                      ParameterType="%AID%_PT-CheckBox"       Offset="2"   BitOffset="7" Text="ECV"                  Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%017" Name="active_PrimVL"                   ParameterType="%AID%_PT-CheckBox"       Offset="2"   BitOffset="0" Text="PrimVL"               Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%018" Name="active_PrimRL"                   ParameterType="%AID%_PT-CheckBox"       Offset="2"   BitOffset="1" Text="PrimRL"               Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%019" Name="active_LüfterStatus"             ParameterType="%AID%_PT-CheckBox"       Offset="2"   BitOffset="2" Text="LüfterStatus"         Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%020" Name="active_LüfterProzent"            ParameterType="%AID%_PT-CheckBox"       Offset="2"   BitOffset="3" Text="LüfterProz"           Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%021" Name="active_SauggasTemp"              ParameterType="%AID%_PT-CheckBox"       Offset="3"   BitOffset="4" Text="SauggasTemp"          Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%022" Name="active_SauggasDruck"             ParameterType="%AID%_PT-CheckBox"       Offset="3"   BitOffset="5" Text="SauggasDruck"         Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%023" Name="active_HeissgasTemp"             ParameterType="%AID%_PT-CheckBox"       Offset="3"   BitOffset="6" Text="HeissgasTemp"         Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%024" Name="active_HeissgasDruck"            ParameterType="%AID%_PT-CheckBox"       Offset="3"   BitOffset="7" Text="HeissgasDruck"        Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%025" Name="active_SekPumpeStatus"           ParameterType="%AID%_PT-CheckBox"       Offset="3"   BitOffset="0" Text="SekPumpeStatus"       Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%026" Name="active_SekPumpeProz"             ParameterType="%AID%_PT-CheckBox"       Offset="3"   BitOffset="1" Text="SekPumpeProz"         Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%027" Name="active_SekVorlauf"               ParameterType="%AID%_PT-CheckBox"       Offset="3"   BitOffset="2" Text="SekVorlauf"           Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%028" Name="active_SekRuecklauf"             ParameterType="%AID%_PT-CheckBox"       Offset="3"   BitOffset="3" Text="SekRuecklauf"         Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%029" Name="active_HeizSpeicher"             ParameterType="%AID%_PT-CheckBox"       Offset="4"   BitOffset="4" Text="HeizSpeicher"         Value="0" />
                 
-                <Parameter Id="%AID%_UP-21%CC%030" Name="CH%C%_active_HK2VL"                    ParameterType="%AID%_PT-CheckBox"       Offset="29"  BitOffset="0" Text="HK2VL"                Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%031" Name="CH%C%_active_HK2niveau"                ParameterType="%AID%_PT-CheckBox"       Offset="30"  BitOffset="0" Text="HK2niveau"            Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%032" Name="CH%C%_active_HK2level"                 ParameterType="%AID%_PT-CheckBox"       Offset="31"  BitOffset="0" Text="HK2level"             Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%033" Name="CH%C%_active_HK3VL"                    ParameterType="%AID%_PT-CheckBox"       Offset="32"  BitOffset="0" Text="HK3VL"                Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%034" Name="CH%C%_active_HK3niveau"                ParameterType="%AID%_PT-CheckBox"       Offset="33"  BitOffset="0" Text="HK3niveau"            Value="0" />
-                <Parameter Id="%AID%_UP-21%CC%035" Name="CH%C%_active_HK3level"                 ParameterType="%AID%_PT-CheckBox"       Offset="34"  BitOffset="0" Text="HK3level"             Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%030" Name="active_HK2VL"                    ParameterType="%AID%_PT-CheckBox"       Offset="4"   BitOffset="5" Text="HK2VL"                Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%031" Name="active_HK2niveau"                ParameterType="%AID%_PT-CheckBox"       Offset="4"   BitOffset="6" Text="HK2niveau"            Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%032" Name="active_HK2level"                 ParameterType="%AID%_PT-CheckBox"       Offset="4"   BitOffset="7" Text="HK2level"             Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%033" Name="active_HK3VL"                    ParameterType="%AID%_PT-CheckBox"       Offset="4"   BitOffset="0" Text="HK3VL"                Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%034" Name="active_HK3niveau"                ParameterType="%AID%_PT-CheckBox"       Offset="4"   BitOffset="1" Text="HK3niveau"            Value="0" />
+                <Parameter Id="%AID%_UP-21%CC%035" Name="active_HK3level"                 ParameterType="%AID%_PT-CheckBox"       Offset="4"   BitOffset="2" Text="HK3level"             Value="0" />
                 
               </Union>
               
-              <Union SizeInBit="3280">
+              <Union SizeInBit="856">
                 <Memory CodeSegment="%AID%_RS-04-00000" Offset="100" BitOffset="0" />
-                <Parameter Id="%AID%_UP-21%CC%101" Name="CH%C%_time_WWOben"                   ParameterType="%AID%_PT-IntervalTime"       Offset="0"    BitOffset="0" Text="WWOben"               Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%102" Name="CH%C%_time_WWUnten"                  ParameterType="%AID%_PT-IntervalTime"       Offset="12"   BitOffset="0" Text="WWUnten"              Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%103" Name="CH%C%_time_WWSoll"                   ParameterType="%AID%_PT-IntervalTime"       Offset="24"   BitOffset="0" Text="WWSoll"               Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%104" Name="CH%C%_time_AussenTemp"               ParameterType="%AID%_PT-IntervalTime"       Offset="36"   BitOffset="0" Text="AussenTemp"           Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%100" Name="time_WWOben"                   ParameterType="%AID%_PT-IntervalTime"       Offset="0"   BitOffset="0" Text="WWOben"                Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%101" Name="time_WWUnten"                  ParameterType="%AID%_PT-IntervalTime"       Offset="3"   BitOffset="0" Text="WWUnten"               Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%102" Name="time_WWSoll"                   ParameterType="%AID%_PT-IntervalTime"       Offset="6"   BitOffset="0" Text="WWSoll"                Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%103" Name="time_Warmwasserbereitung"      ParameterType="%AID%_PT-IntervalTime"       Offset="9"   BitOffset="0" Text="Warmwasserbereitung"   Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%104" Name="time_AussenTemp"               ParameterType="%AID%_PT-IntervalTime"       Offset="12"  BitOffset="0" Text="AussenTemp"            Value="3600" />
 
-                <Parameter Id="%AID%_UP-21%CC%105" Name="CH%C%_time_FaktorEnergie"            ParameterType="%AID%_PT-IntervalTime"       Offset="48"   BitOffset="0" Text="FaktorEnergie"        Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%106" Name="CH%C%_time_HeizWärmeHeizung"         ParameterType="%AID%_PT-IntervalTime"       Offset="60"   BitOffset="0" Text="HeizWärmeHeizung"     Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%107" Name="CH%C%_time_HeizWärmeWarmwasser"      ParameterType="%AID%_PT-IntervalTime"       Offset="72"   BitOffset="0" Text="HeizWärmeWarmwasser"  Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%108" Name="CH%C%_time_EnergieHeizung"           ParameterType="%AID%_PT-IntervalTime"       Offset="84"   BitOffset="0" Text="EnergieHeizung"       Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%109" Name="CH%C%_time_EnergieWarmwasser"        ParameterType="%AID%_PT-IntervalTime"       Offset="96"   BitOffset="0" Text="EnergieWarmwasser"    Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%110" Name="CH%C%_time_JAZges"                   ParameterType="%AID%_PT-IntervalTime"       Offset="108"  BitOffset="0" Text="JAZges"               Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%111" Name="CH%C%_time_JAZhe"                    ParameterType="%AID%_PT-IntervalTime"       Offset="120"  BitOffset="0" Text="JAZhe"                Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%112" Name="CH%C%_time_JAZww"                    ParameterType="%AID%_PT-IntervalTime"       Offset="132"  BitOffset="0" Text="JAZww"                Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%105" Name="time_FaktorEnergie"            ParameterType="%AID%_PT-IntervalTime"       Offset="15"  BitOffset="0" Text="FaktorEnergie"         Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%106" Name="time_HeizWärmeHeizung"         ParameterType="%AID%_PT-IntervalTime"       Offset="18"  BitOffset="0" Text="HeizWärmeHeizung"      Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%107" Name="time_HeizWärmeWarmwasser"      ParameterType="%AID%_PT-IntervalTime"       Offset="21"  BitOffset="0" Text="HeizWärmeWarmwasser"   Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%108" Name="time_EnergieHeizung"           ParameterType="%AID%_PT-IntervalTime"       Offset="24"  BitOffset="0" Text="EnergieHeizung"        Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%109" Name="time_EnergieWarmwasser"        ParameterType="%AID%_PT-IntervalTime"       Offset="27"  BitOffset="0" Text="EnergieWarmwasser"     Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%110" Name="time_JAZges"                   ParameterType="%AID%_PT-IntervalTime"       Offset="30"  BitOffset="0" Text="JAZges"                Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%111" Name="time_JAZhe"                    ParameterType="%AID%_PT-IntervalTime"       Offset="33"  BitOffset="0" Text="JAZhe"                 Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%112" Name="time_JAZww"                    ParameterType="%AID%_PT-IntervalTime"       Offset="36"  BitOffset="0" Text="JAZww"                 Value="3600" />
                 
-                <Parameter Id="%AID%_UP-21%CC%113" Name="CH%C%_time_VerdichterStatus"         ParameterType="%AID%_PT-IntervalTime"       Offset="144"  BitOffset="0" Text="VerdichterStatus"     Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%114" Name="CH%C%_time_VerdichterProz"           ParameterType="%AID%_PT-IntervalTime"       Offset="156"  BitOffset="0" Text="VerdichterProz"       Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%115" Name="CH%C%_time_KaelteUmkehr"             ParameterType="%AID%_PT-IntervalTime"       Offset="168"  BitOffset="0" Text="KaelteUmkehr"         Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%116" Name="CH%C%_time_ECV"                      ParameterType="%AID%_PT-IntervalTime"       Offset="180"  BitOffset="0" Text="ECV"                  Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%117" Name="CH%C%_time_PrimVL"                   ParameterType="%AID%_PT-IntervalTime"       Offset="192"  BitOffset="0" Text="PrimVL"               Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%118" Name="CH%C%_time_PrimRL"                   ParameterType="%AID%_PT-IntervalTime"       Offset="204"  BitOffset="0" Text="PrimRL"               Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%119" Name="CH%C%_time_LüfterSt"                 ParameterType="%AID%_PT-IntervalTime"       Offset="216"  BitOffset="0" Text="LüfterStatus"         Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%120" Name="CH%C%_time_LüfterProzatus"           ParameterType="%AID%_PT-IntervalTime"       Offset="228"  BitOffset="0" Text="LüfterProz"           Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%121" Name="CH%C%_time_SauggasTemp"              ParameterType="%AID%_PT-IntervalTime"       Offset="240"  BitOffset="0" Text="Sauggas Temperatur"   Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%122" Name="CH%C%_time_SauggasDruck"             ParameterType="%AID%_PT-IntervalTime"       Offset="252"  BitOffset="0" Text="Sauggas Druck"        Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%123" Name="CH%C%_time_HeissgasTemp"             ParameterType="%AID%_PT-IntervalTime"       Offset="264"  BitOffset="0" Text="Heissgas Temperatur"  Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%124" Name="CH%C%_time_HeissgasDruck"            ParameterType="%AID%_PT-IntervalTime"       Offset="276"  BitOffset="0" Text="Heissgas Druck"       Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%125" Name="CH%C%_time_SekPumpeStatus"           ParameterType="%AID%_PT-IntervalTime"       Offset="288"  BitOffset="0" Text="SekPumpeStatus"       Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%126" Name="CH%C%_time_SekPumpeProz"             ParameterType="%AID%_PT-IntervalTime"       Offset="300"  BitOffset="0" Text="SekPumpeProz"         Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%127" Name="CH%C%_time_SekVorlauf"               ParameterType="%AID%_PT-IntervalTime"       Offset="312"  BitOffset="0" Text="SekVorlauf"           Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%128" Name="CH%C%_time_SekRuecklauf"             ParameterType="%AID%_PT-IntervalTime"       Offset="324"  BitOffset="0" Text="SekRuecklauf"         Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%129" Name="CH%C%_time_HeizSpeicher"             ParameterType="%AID%_PT-IntervalTime"       Offset="336"  BitOffset="0" Text="HeizSpeicher"         Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%113" Name="time_VerdichterStatus"         ParameterType="%AID%_PT-IntervalTime"       Offset="39"  BitOffset="0" Text="VerdichterStatus"      Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%114" Name="time_VerdichterProz"           ParameterType="%AID%_PT-IntervalTime"       Offset="42"  BitOffset="0" Text="VerdichterProz"        Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%115" Name="time_KaelteUmkehr"             ParameterType="%AID%_PT-IntervalTime"       Offset="45"  BitOffset="0" Text="KaelteUmkehr"          Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%116" Name="time_ECV"                      ParameterType="%AID%_PT-IntervalTime"       Offset="48"  BitOffset="0" Text="ECV"                   Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%117" Name="time_PrimVL"                   ParameterType="%AID%_PT-IntervalTime"       Offset="51"  BitOffset="0" Text="PrimVL"                Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%118" Name="time_PrimRL"                   ParameterType="%AID%_PT-IntervalTime"       Offset="54"  BitOffset="0" Text="PrimRL"                Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%119" Name="time_LüfterSt"                 ParameterType="%AID%_PT-IntervalTime"       Offset="57"  BitOffset="0" Text="LüfterStatus"          Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%120" Name="time_LüfterProz"               ParameterType="%AID%_PT-IntervalTime"       Offset="60"  BitOffset="0" Text="LüfterProz"            Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%121" Name="time_SauggasTemp"              ParameterType="%AID%_PT-IntervalTime"       Offset="63"  BitOffset="0" Text="Sauggas Temperatur"    Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%122" Name="time_SauggasDruck"             ParameterType="%AID%_PT-IntervalTime"       Offset="66"  BitOffset="0" Text="Sauggas Druck"         Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%123" Name="time_HeissgasTemp"             ParameterType="%AID%_PT-IntervalTime"       Offset="69"  BitOffset="0" Text="Heissgas Temperatur"   Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%124" Name="time_HeissgasDruck"            ParameterType="%AID%_PT-IntervalTime"       Offset="72"  BitOffset="0" Text="Heissgas Druck"        Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%125" Name="time_SekPumpeStatus"           ParameterType="%AID%_PT-IntervalTime"       Offset="75"  BitOffset="0" Text="SekPumpeStatus"        Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%126" Name="time_SekPumpeProz"             ParameterType="%AID%_PT-IntervalTime"       Offset="78"  BitOffset="0" Text="SekPumpeProz"          Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%127" Name="time_SekVorlauf"               ParameterType="%AID%_PT-IntervalTime"       Offset="81"  BitOffset="0" Text="SekVorlauf"            Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%128" Name="time_SekRuecklauf"             ParameterType="%AID%_PT-IntervalTime"       Offset="84"  BitOffset="0" Text="SekRuecklauf"          Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%129" Name="time_HeizSpeicher"             ParameterType="%AID%_PT-IntervalTime"       Offset="87"  BitOffset="0" Text="HeizSpeicher"          Value="3600" />
                 
-                <Parameter Id="%AID%_UP-21%CC%130" Name="CH%C%_time_HK2VL"                    ParameterType="%AID%_PT-IntervalTime"       Offset="348"  BitOffset="0" Text="HK2VL"                Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%131" Name="CH%C%_time_HK2niveau"                ParameterType="%AID%_PT-IntervalTime"       Offset="360"  BitOffset="0" Text="HK2niveau"            Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%132" Name="CH%C%_time_HK2level"                 ParameterType="%AID%_PT-IntervalTime"       Offset="372"  BitOffset="0" Text="HK2level"             Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%133" Name="CH%C%_time_HK3VL"                    ParameterType="%AID%_PT-IntervalTime"       Offset="384"  BitOffset="0" Text="HK3VL"                Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%134" Name="CH%C%_time_HK3niveau"                ParameterType="%AID%_PT-IntervalTime"       Offset="396"  BitOffset="0" Text="HK3niveau"            Value="4095" />
-                <Parameter Id="%AID%_UP-21%CC%135" Name="CH%C%_time_HK3level"                 ParameterType="%AID%_PT-IntervalTime"       Offset="408"  BitOffset="0" Text="HK3level"             Value="4095" />
+                <Parameter Id="%AID%_UP-21%CC%130" Name="time_HK2VL"                    ParameterType="%AID%_PT-IntervalTime"       Offset="90"  BitOffset="0" Text="HK2VL"                 Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%131" Name="time_HK2niveau"                ParameterType="%AID%_PT-IntervalTime"       Offset="93"  BitOffset="0" Text="HK2niveau"             Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%132" Name="time_HK2level"                 ParameterType="%AID%_PT-IntervalTime"       Offset="96"  BitOffset="0" Text="HK2level"              Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%133" Name="time_HK3VL"                    ParameterType="%AID%_PT-IntervalTime"       Offset="99"  BitOffset="0" Text="HK3VL"                 Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%134" Name="time_HK3niveau"                ParameterType="%AID%_PT-IntervalTime"       Offset="102" BitOffset="0" Text="HK3niveau"             Value="3600" />
+                <Parameter Id="%AID%_UP-21%CC%135" Name="time_HK3level"                 ParameterType="%AID%_PT-IntervalTime"       Offset="105" BitOffset="0" Text="HK3level"              Value="3600" />
                 
               </Union>
               
             </Parameters>
 
             <ParameterRefs>
+              <ParameterRef Id="%AID%_UP-21%CC%000_R-21%CC%00001" RefId="%AID%_UP-21%CC%000" />
               <ParameterRef Id="%AID%_UP-21%CC%001_R-21%CC%00101" RefId="%AID%_UP-21%CC%001" />
               <ParameterRef Id="%AID%_UP-21%CC%002_R-21%CC%00201" RefId="%AID%_UP-21%CC%002" />
               <ParameterRef Id="%AID%_UP-21%CC%003_R-21%CC%00301" RefId="%AID%_UP-21%CC%003" />
@@ -136,6 +141,7 @@
               <ParameterRef Id="%AID%_UP-21%CC%034_R-21%CC%03401" RefId="%AID%_UP-21%CC%034" />
               <ParameterRef Id="%AID%_UP-21%CC%035_R-21%CC%03501" RefId="%AID%_UP-21%CC%035" />
 
+              <ParameterRef Id="%AID%_UP-21%CC%100_R-21%CC%10001" RefId="%AID%_UP-21%CC%100" />
               <ParameterRef Id="%AID%_UP-21%CC%101_R-21%CC%10101" RefId="%AID%_UP-21%CC%101" />
               <ParameterRef Id="%AID%_UP-21%CC%102_R-21%CC%10201" RefId="%AID%_UP-21%CC%102" />
               <ParameterRef Id="%AID%_UP-21%CC%103_R-21%CC%10301" RefId="%AID%_UP-21%CC%103" />
@@ -174,84 +180,88 @@
             </ParameterRefs>
 
             <ComObjectTable>
-               <ComObject Id="%AID%_O-21%CC%000" Name="Ch%C%Warmwasser_Oben"         Text="Warmwasser_Oben"          Number="%K00%"  FunctionText="Optolink %C%: Warmwasser_Oben"          ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"     />
-               <ComObject Id="%AID%_O-21%CC%001" Name="Ch%C%Warmwasser_Unten"        Text="Warmwasser_Unten"         Number="%K01%"  FunctionText="Optolink %C%: Warmwasser_Unten"         ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"     />
-               <ComObject Id="%AID%_O-21%CC%002" Name="Ch%C%Warmwasser_Soll"         Text="Warmwasser_Soll"          Number="%K02%"  FunctionText="Optolink %C%: Warmwasser_Soll"          ObjectSize="2 Byte"   ReadFlag="Enabled"  WriteFlag="Disabled" CommunicationFlag="Enabled" TransmitFlag="Enabled"  UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"    /> 
-               <ComObject Id="%AID%_O-21%CC%003" Name="Ch%C%Aussentemperatur"        Text="Aussentemperatur"         Number="%K03%"  FunctionText="Optolink %C%: Aussentemperatur"         ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Enabled"  UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"    />
-               <ComObject Id="%AID%_O-21%CC%004" Name="Ch%C%Faktor_Energie"          Text="Faktor_Energie"           Number="%K04%"  FunctionText="Optolink %C%: Faktor_Energie"           ObjectSize="1 Byte"   ReadFlag="Enabled"  WriteFlag="Disabled" CommunicationFlag="Enabled" TransmitFlag="Enabled"  UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-1-11"    />
-               <ComObject Id="%AID%_O-21%CC%005" Name="Ch%C%Heizwärme_Heizung"       Text="Heizwärme_Heizung"        Number="%K05%"  FunctionText="Optolink %C%: Heizwärme_Heizung"        ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%006" Name="Ch%C%Heizwärme_Warmwasser"    Text="Heizwärme_Warmwasser"     Number="%K06%"  FunctionText="Optolink %C%: Heizwärme_Warmwasser"     ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%007" Name="Ch%C%Energie_Heizung"         Text="Energie_Heizung"          Number="%K07%"  FunctionText="Optolink %C%: Energie_Heizung"          ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%008" Name="Ch%C%Energie_Warmwasser"      Text="Energie_Warmwasser"       Number="%K08%"  FunctionText="Optolink %C%: Energie_Warmwasser"       ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%009" Name="Ch%C%JAZ_Gesamt"              Text="JAZ_Gesamt"               Number="%K09%"  FunctionText="Optolink %C%: JAZ_Gesamt"               ObjectSize="1 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%010" Name="Ch%C%JAZ_Heizung"             Text="JAZ_Heizung"              Number="%K10%"  FunctionText="Optolink %C%: JAZ_Heizung"              ObjectSize="1 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%011" Name="Ch%C%JAZ_Warmwasser"          Text="JAZ_Warmwasser"           Number="%K11%"  FunctionText="Optolink %C%: JAZ_Warmwasser"           ObjectSize="1 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%012" Name="Ch%C%Verdichter_Status"       Text="Verdichter_Status"        Number="%K12%"  FunctionText="Optolink %C%: Verdichter_Status"        ObjectSize="1 Bit"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%013" Name="Ch%C%Verdichter_Prozent"      Text="Verdichter_Prozent"       Number="%K13%"  FunctionText="Optolink %C%: Verdichter_Prozent"       ObjectSize="1 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%014" Name="Ch%C%Kaelte_Umkehr"           Text="Kaelte_Umkehr"            Number="%K14%"  FunctionText="Optolink %C%: Kaelte_Umkehr"            ObjectSize="1 Bit"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%015" Name="Ch%C%ECV"                     Text="ECV"                      Number="%K15%"  FunctionText="Optolink %C%: ECV"                      ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%016" Name="Ch%C%Primaer_Vorlauf"         Text="Primaer_Vorlauf"          Number="%K16%"  FunctionText="Optolink %C%: Primaer_Vorlauf"          ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"     />
-               <ComObject Id="%AID%_O-21%CC%017" Name="Ch%C%Primaer_Rücklauf"        Text="Primaer_Rücklauf"         Number="%K17%"  FunctionText="Optolink %C%: Primaer_Rücklauf"         ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"     />
-               <ComObject Id="%AID%_O-21%CC%018" Name="Ch%C%Lüfter_Status"           Text="Lüfter_Status"            Number="%K18%"  FunctionText="Optolink %C%: Lüfter_Status"            ObjectSize="1 Bit"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%019" Name="Ch%C%Lüfter_Prozent"          Text="Lüfter_Prozent"           Number="%K19%"  FunctionText="Optolink %C%: Lüfter_Prozent"           ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%020" Name="Ch%C%Sauggas"                 Text="Sauggas"                  Number="%K20%"  FunctionText="Optolink %C%: Sauggas"                  ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%021" Name="Ch%C%Heissgas"                Text="Heissgas"                 Number="%K21%"  FunctionText="Optolink %C%: Heissgas"                 ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%022" Name="Ch%C%Sekundaerpumpe_Status"   Text="Sekundaerpumpe_Status"    Number="%K22%"  FunctionText="Optolink %C%: Sekundaerpumpe_Status"    ObjectSize="1 Bit"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%023" Name="Ch%C%Sekundaerpumpe_Prozent"  Text="Sekundaerpumpe_Prozent"   Number="%K23%"  FunctionText="Optolink %C%: Sekundaerpumpe_Prozent"   ObjectSize="1 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%024" Name="Ch%C%Sekundaer_Vorlauf"       Text="Ch%C%Sekundaer_Vorlauf"   Number="%K24%"  FunctionText="Optolink %C%: Sekundaer_Vorlauf"        ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%025" Name="Ch%C%Sekundaer_Rücklauf"      Text="Sekundaer_Rücklauf"       Number="%K25%"  FunctionText="Optolink %C%: Sekundaer_Rücklauf"       ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%026" Name="Ch%C%Heizungsspeicher"        Text="Heizungsspeicher"         Number="%K26%"  FunctionText="Optolink %C%: Heizungsspeicher"         ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%027" Name="Ch%C%HK2_VL"                  Text="HK2_VL"                   Number="%K27%"  FunctionText="Optolink %C%: HK2_VL"                   ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%028" Name="Ch%C%HK2_Niveau"              Text="HK2_Niveau"               Number="%K28%"  FunctionText="Optolink %C%: HK2_Niveau"               ObjectSize="1 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%029" Name="Ch%C%HK2_Level"               Text="HK2_Level"                Number="%K29%"  FunctionText="Optolink %C%: HK2_Level"                ObjectSize="1 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%030" Name="Ch%C%HK3_VL"                  Text="HK3_VL"                   Number="%K30%"  FunctionText="Optolink %C%: HK3_VL"                   ObjectSize="2 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%031" Name="Ch%C%HK3_Niveau"              Text="HK3_Niveau"               Number="%K31%"  FunctionText="Optolink %C%: HK3_Niveau"               ObjectSize="1 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
-               <ComObject Id="%AID%_O-21%CC%032" Name="Ch%C%HK3_Level"               Text="HK3_Level"                Number="%K32%"  FunctionText="Optolink %C%: HK3_Level"                ObjectSize="1 Byte"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"     />
+               <ComObject Id="%AID%_O-21%CC%000" Name="Warmwasser_Oben"         Text="Warmwasser Oben"          Number="%K00%"  FunctionText="Ausgang Messwert °C"             ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"   />
+               <ComObject Id="%AID%_O-21%CC%001" Name="Warmwasser_Unten"        Text="Warmwasser Unten"         Number="%K01%"  FunctionText="Ausgang Messwert °C"             ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"   />
+               <ComObject Id="%AID%_O-21%CC%002" Name="Warmwasser_Soll"         Text="Warmwasser Soll"          Number="%K02%"  FunctionText="Ausgang Konfiguration °C"        ObjectSize="2 Bytes"   ReadFlag="Enabled"  WriteFlag="Disabled" CommunicationFlag="Enabled" TransmitFlag="Enabled"  UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"   /> 
+               <ComObject Id="%AID%_O-21%CC%003" Name="Warmwasserbereitung"     Text="Warmwasserbereitung"      Number="%K03%"  FunctionText="Ausgang Messwert Status"         ObjectSize="1 Bit"     ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Enabled"  UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-1-1"   />
+               <ComObject Id="%AID%_O-21%CC%004" Name="Aussentemperatur"        Text="Aussentemperatur"         Number="%K04%"  FunctionText="Ausgang Messwert °C"             ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Enabled"  UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"   />
+               <ComObject Id="%AID%_O-21%CC%005" Name="Faktor_Energie"          Text="Faktor Energie"           Number="%K05%"  FunctionText="Ausgang Messwert Faktor"         ObjectSize="1 Byte"    ReadFlag="Enabled"  WriteFlag="Disabled" CommunicationFlag="Enabled" TransmitFlag="Enabled"  UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-5"   />
+               <ComObject Id="%AID%_O-21%CC%006" Name="Heizwärme_Heizung"       Text="Heizwärme Heizung"        Number="%K06%"  FunctionText="Ausgang Messwert kWh"            ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-24"  />
+               <ComObject Id="%AID%_O-21%CC%007" Name="Heizwärme_Warmwasser"    Text="Heizwärme Warmwasser"     Number="%K07%"  FunctionText="Ausgang Messwert kWh"            ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-24"  />
+               <ComObject Id="%AID%_O-21%CC%008" Name="Energie_Heizung"         Text="Energie Heizung"          Number="%K08%"  FunctionText="Ausgang Messwert kWh"            ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-24"  />
+               <ComObject Id="%AID%_O-21%CC%009" Name="Energie_Warmwasser"      Text="Energie Warmwasser"       Number="%K09%"  FunctionText="Ausgang Messwert kWh"            ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-24"  />
+               <ComObject Id="%AID%_O-21%CC%010" Name="JAZ_Gesamt"              Text="JAZ Gesamt"               Number="%K10%"  FunctionText="Ausgang Messwert Faktor"         ObjectSize="1 Byte"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"   />
+               <ComObject Id="%AID%_O-21%CC%011" Name="JAZ_Heizung"             Text="JAZ Heizung"              Number="%K11%"  FunctionText="Ausgang Messwert Faktor"         ObjectSize="1 Byte"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"   />
+               <ComObject Id="%AID%_O-21%CC%012" Name="JAZ_Warmwasser"          Text="JAZ Warmwasser"           Number="%K12%"  FunctionText="Ausgang Messwert Faktor"         ObjectSize="1 Byte"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"   />
+               <ComObject Id="%AID%_O-21%CC%013" Name="Verdichter_Status"       Text="Verdichter Status"        Number="%K13%"  FunctionText="Ausgang Messwert Status"         ObjectSize="1 Bit"     ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-1-1"   />
+               <ComObject Id="%AID%_O-21%CC%014" Name="Verdichter_Prozent"      Text="Verdichter Leistung"      Number="%K14%"  FunctionText="Ausgang Messwert %"              ObjectSize="1 Byte"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"   />
+               <ComObject Id="%AID%_O-21%CC%015" Name="Kaelte_Umkehr"           Text="Kaelte Umkehr"            Number="%K15%"  FunctionText="Ausgang Messwert Status"         ObjectSize="1 Bit"     ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-1-1"   />
+               <ComObject Id="%AID%_O-21%CC%016" Name="ECV"                     Text="ECV"                      Number="%K16%"  FunctionText="Ausgang Messwert %"              ObjectSize="1 Byte"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"   />
+               <ComObject Id="%AID%_O-21%CC%017" Name="Primaer_Vorlauf"         Text="Primaer Vorlauf"          Number="%K17%"  FunctionText="Ausgang Messwert °C"             ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"   />
+               <ComObject Id="%AID%_O-21%CC%018" Name="Primaer_Rücklauf"        Text="Primaer Rücklauf"         Number="%K18%"  FunctionText="Ausgang Messwert °C"             ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"   />
+               <ComObject Id="%AID%_O-21%CC%019" Name="Lüfter_Status"           Text="Lüfter Status"            Number="%K19%"  FunctionText="Ausgang Messwert Status"         ObjectSize="1 Bit"     ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-1-1"   />
+               <ComObject Id="%AID%_O-21%CC%020" Name="Lüfter_Prozent"          Text="Lüfter_Leistung"          Number="%K20%"  FunctionText="Ausgang Messwert %"              ObjectSize="1 Byte"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"   />
+               <ComObject Id="%AID%_O-21%CC%021" Name="SauggasTemp"             Text="Sauggas Temperatur"       Number="%K21%"  FunctionText="Ausgang Messwert °C"             ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"   />
+               <ComObject Id="%AID%_O-21%CC%022" Name="SauggasDruck"            Text="Sauggas Druck"            Number="%K22%"  FunctionText="Ausgang Messwert Bar"            ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-6"   />
+               <ComObject Id="%AID%_O-21%CC%023" Name="HeissgasTemp"            Text="Heissgas Temperatur"      Number="%K23%"  FunctionText="Ausgang Messwert °C"             ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"   />
+               <ComObject Id="%AID%_O-21%CC%024" Name="HeissgasDruck"           Text="Heissgas Druck"           Number="%K24%"  FunctionText="Ausgang Messwert Bar"            ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-6"   />
+               <ComObject Id="%AID%_O-21%CC%025" Name="Sekundaerpumpe_Status"   Text="Sekundaerpumpe Status"    Number="%K25%"  FunctionText="Ausgang Messwert Status"         ObjectSize="1 Bit"     ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-1-1"   />
+               <ComObject Id="%AID%_O-21%CC%026" Name="Sekundaerpumpe_Prozent"  Text="Sekundaerpumpe Leistung"  Number="%K26%"  FunctionText="Ausgang Messwert %"              ObjectSize="1 Byte"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-5-1"   />
+               <ComObject Id="%AID%_O-21%CC%027" Name="Sekundaer_Vorlauf"       Text="Sekundaer Vorlauf"        Number="%K27%"  FunctionText="Ausgang Messwert °C"             ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"   />
+               <ComObject Id="%AID%_O-21%CC%028" Name="Sekundaer_Rücklauf"      Text="Sekundaer Rücklauf"       Number="%K28%"  FunctionText="Ausgang Messwert °C"             ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"   />
+               <ComObject Id="%AID%_O-21%CC%029" Name="Heizungsspeicher"        Text="Heizungsspeicher"         Number="%K29%"  FunctionText="Ausgang Messwert °C"             ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"   />
+               <ComObject Id="%AID%_O-21%CC%030" Name="HK2_VL"                  Text="HK2 VorLauf"              Number="%K30%"  FunctionText="Ausgang Messwert °C"             ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"   />
+               <ComObject Id="%AID%_O-21%CC%031" Name="HK2_Niveau"              Text="HK2 Niveau"               Number="%K31%"  FunctionText="Ausgang Konfiguration Niveau"    ObjectSize="1 Byte"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-6-1"   />
+               <ComObject Id="%AID%_O-21%CC%032" Name="HK2_Neigung"             Text="HK2 Neigung"              Number="%K32%"  FunctionText="Ausgang Konfiguration Neigung"   ObjectSize="1 Byte"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-6-1"   />
+               <ComObject Id="%AID%_O-21%CC%033" Name="HK3_VL"                  Text="HK3 VorLauf"              Number="%K33%"  FunctionText="Ausgang Messwert °C"             ObjectSize="2 Bytes"   ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-9-1"   />
+               <ComObject Id="%AID%_O-21%CC%034" Name="HK3_Niveau"              Text="HK3 Niveau"               Number="%K34%"  FunctionText="Ausgang Konfiguration Niveau"    ObjectSize="1 Byte"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-6-1"   />
+               <ComObject Id="%AID%_O-21%CC%035" Name="HK3_Neigung"             Text="HK3 Neigung"              Number="%K35%"  FunctionText="Ausgang Konfiguration Neigung"   ObjectSize="1 Byte"    ReadFlag="Disabled" WriteFlag="Enabled"  CommunicationFlag="Enabled" TransmitFlag="Disabled" UpdateFlag="Disabled" ReadOnInitFlag="Disabled" DatapointType="DPST-6-1"   />
             </ComObjectTable>
 
             <ComObjectRefs>
-              <ComObjectRef Id="%AID%_O-21%CC%000_R-21%CC%00001" RefId="%AID%_O-21%CC%000" Text="{{0:Optolink %C%}}: Temperatur"    TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%001_R-21%CC%00101" RefId="%AID%_O-21%CC%001" Text="{{0:Optolink %C%}}: Temperatur"    TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%002_R-21%CC%00201" RefId="%AID%_O-21%CC%002" Text="{{0:Optolink %C%}}: Temperatur"    TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%003_R-21%CC%00301" RefId="%AID%_O-21%CC%003" Text="{{0:Optolink %C%}}: Temperatur"    TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%004_R-21%CC%00401" RefId="%AID%_O-21%CC%004" Text="{{0:Optolink %C%}}: X"             TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%005_R-21%CC%00501" RefId="%AID%_O-21%CC%005" Text="{{0:Optolink %C%}}: kWh"           TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%006_R-21%CC%00601" RefId="%AID%_O-21%CC%006" Text="{{0:Optolink %C%}}: kWh"           TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%007_R-21%CC%00701" RefId="%AID%_O-21%CC%007" Text="{{0:Optolink %C%}}: kWh"           TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%008_R-21%CC%00801" RefId="%AID%_O-21%CC%008" Text="{{0:Optolink %C%}}: kWh"           TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%009_R-21%CC%00901" RefId="%AID%_O-21%CC%009" Text="{{0:Optolink %C%}}: X"             TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%010_R-21%CC%01001" RefId="%AID%_O-21%CC%010" Text="{{0:Optolink %C%}}: X"             TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%011_R-21%CC%01101" RefId="%AID%_O-21%CC%011" Text="{{0:Optolink %C%}}: X"             TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%012_R-21%CC%01201" RefId="%AID%_O-21%CC%012" Text="{{0:Optolink %C%}}: Schalten"      TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%013_R-21%CC%01301" RefId="%AID%_O-21%CC%013" Text="{{0:Optolink %C%}}: %"             TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%014_R-21%CC%01401" RefId="%AID%_O-21%CC%014" Text="{{0:Optolink %C%}}: Schalten"      TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%015_R-21%CC%01501" RefId="%AID%_O-21%CC%015" Text="{{0:Optolink %C%}}: %"             TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%016_R-21%CC%01601" RefId="%AID%_O-21%CC%016" Text="{{0:Optolink %C%}}: Temperatur"    TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%017_R-21%CC%01701" RefId="%AID%_O-21%CC%017" Text="{{0:Optolink %C%}}: Temperatur"    TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%018_R-21%CC%01801" RefId="%AID%_O-21%CC%018" Text="{{0:Optolink %C%}}: Schalten"      TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%019_R-21%CC%01901" RefId="%AID%_O-21%CC%019" Text="{{0:Optolink %C%}}: %"             TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%020_R-21%CC%02001" RefId="%AID%_O-21%CC%020" Text="{{0:Optolink %C%}}: Druck"         TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%021_R-21%CC%02101" RefId="%AID%_O-21%CC%021" Text="{{0:Optolink %C%}}: Druck"         TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%022_R-21%CC%02201" RefId="%AID%_O-21%CC%022" Text="{{0:Optolink %C%}}: Schalten"      TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%023_R-21%CC%02301" RefId="%AID%_O-21%CC%023" Text="{{0:Optolink %C%}}: %"             TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%024_R-21%CC%02401" RefId="%AID%_O-21%CC%024" Text="{{0:Optolink %C%}}: Temperatur"    TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%025_R-21%CC%02501" RefId="%AID%_O-21%CC%025" Text="{{0:Optolink %C%}}: Temperatur"    TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%026_R-21%CC%02601" RefId="%AID%_O-21%CC%026" Text="{{0:Optolink %C%}}: Temperatur"    TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%027_R-21%CC%02701" RefId="%AID%_O-21%CC%027" Text="{{0:Optolink %C%}}: Temperatur"    TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%028_R-21%CC%02801" RefId="%AID%_O-21%CC%028" Text="{{0:Optolink %C%}}: X"             TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%029_R-21%CC%02901" RefId="%AID%_O-21%CC%029" Text="{{0:Optolink %C%}}: X"             TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%030_R-21%CC%03001" RefId="%AID%_O-21%CC%030" Text="{{0:Optolink %C%}}: Temperatur"    TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%031_R-21%CC%03101" RefId="%AID%_O-21%CC%031" Text="{{0:Optolink %C%}}: X"             TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%032_R-21%CC%03201" RefId="%AID%_O-21%CC%032" Text="{{0:Optolink %C%}}: X"             TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
-              <ComObjectRef Id="%AID%_O-21%CC%033_R-21%CC%03301" RefId="%AID%_O-21%CC%033" Text="{{0:Optolink %C%}}: "              TextParameterRefId="%AID%_P-21%CC%002_R-21%CC%00201" />
+              <ComObjectRef Id="%AID%_O-21%CC%000_R-21%CC%00001" RefId="%AID%_O-21%CC%000" Text="Optolink 200A: Warmwasser Oben"        />
+              <ComObjectRef Id="%AID%_O-21%CC%001_R-21%CC%00101" RefId="%AID%_O-21%CC%001" Text="Optolink 200A: Warmwasser Unten"       />
+              <ComObjectRef Id="%AID%_O-21%CC%002_R-21%CC%00201" RefId="%AID%_O-21%CC%002" Text="Optolink 200A: Warmwasser Soll"        />
+              <ComObjectRef Id="%AID%_O-21%CC%003_R-21%CC%00301" RefId="%AID%_O-21%CC%003" Text="Optolink 200A: Warmwasserbereitung"    />
+              <ComObjectRef Id="%AID%_O-21%CC%004_R-21%CC%00401" RefId="%AID%_O-21%CC%004" Text="Optolink 200A: Aussentemperatur"       />
+              <ComObjectRef Id="%AID%_O-21%CC%005_R-21%CC%00501" RefId="%AID%_O-21%CC%005" Text="Optolink 200A: Faktor Energie"         />
+              <ComObjectRef Id="%AID%_O-21%CC%006_R-21%CC%00601" RefId="%AID%_O-21%CC%006" Text="Optolink 200A: Heizwärme Heizung"      />
+              <ComObjectRef Id="%AID%_O-21%CC%007_R-21%CC%00701" RefId="%AID%_O-21%CC%007" Text="Optolink 200A: Heizwärme Warmwasser"   />
+              <ComObjectRef Id="%AID%_O-21%CC%008_R-21%CC%00801" RefId="%AID%_O-21%CC%008" Text="Optolink 200A: Energie Heizung"        />
+              <ComObjectRef Id="%AID%_O-21%CC%009_R-21%CC%00901" RefId="%AID%_O-21%CC%009" Text="Optolink 200A: Energie Warmwasser"     />
+              <ComObjectRef Id="%AID%_O-21%CC%010_R-21%CC%01001" RefId="%AID%_O-21%CC%010" Text="Optolink 200A: JAZ Gesamt"             />
+              <ComObjectRef Id="%AID%_O-21%CC%011_R-21%CC%01101" RefId="%AID%_O-21%CC%011" Text="Optolink 200A: JAZ Heizung"            />
+              <ComObjectRef Id="%AID%_O-21%CC%012_R-21%CC%01201" RefId="%AID%_O-21%CC%012" Text="Optolink 200A: JAZ Warmwasser"         />
+              <ComObjectRef Id="%AID%_O-21%CC%013_R-21%CC%01301" RefId="%AID%_O-21%CC%013" Text="Optolink 200A: Verdichter Status"      />
+              <ComObjectRef Id="%AID%_O-21%CC%014_R-21%CC%01401" RefId="%AID%_O-21%CC%014" Text="Optolink 200A: Verdichter Leistung"    />
+              <ComObjectRef Id="%AID%_O-21%CC%015_R-21%CC%01501" RefId="%AID%_O-21%CC%015" Text="Optolink 200A: Kälteumkehr"            />
+              <ComObjectRef Id="%AID%_O-21%CC%016_R-21%CC%01601" RefId="%AID%_O-21%CC%016" Text="Optolink 200A: ECV"                    />
+              <ComObjectRef Id="%AID%_O-21%CC%017_R-21%CC%01701" RefId="%AID%_O-21%CC%017" Text="Optolink 200A: Primär Vorlauf"         />
+              <ComObjectRef Id="%AID%_O-21%CC%018_R-21%CC%01801" RefId="%AID%_O-21%CC%018" Text="Optolink 200A: Primär Rücklauf"        />
+              <ComObjectRef Id="%AID%_O-21%CC%019_R-21%CC%01901" RefId="%AID%_O-21%CC%019" Text="Optolink 200A: Lüfter Status"          />
+              <ComObjectRef Id="%AID%_O-21%CC%020_R-21%CC%02001" RefId="%AID%_O-21%CC%020" Text="Optolink 200A: Lüfter Leistung"        />
+              <ComObjectRef Id="%AID%_O-21%CC%021_R-21%CC%02101" RefId="%AID%_O-21%CC%021" Text="Optolink 200A: Sauggas Temperatur"     />
+              <ComObjectRef Id="%AID%_O-21%CC%022_R-21%CC%02201" RefId="%AID%_O-21%CC%022" Text="Optolink 200A: Sauggas Druck"          />
+              <ComObjectRef Id="%AID%_O-21%CC%023_R-21%CC%02301" RefId="%AID%_O-21%CC%023" Text="Optolink 200A: HeißgasTemperatur"      />
+              <ComObjectRef Id="%AID%_O-21%CC%024_R-21%CC%02401" RefId="%AID%_O-21%CC%024" Text="Optolink 200A: Heißgas Druck"          />
+              <ComObjectRef Id="%AID%_O-21%CC%025_R-21%CC%02501" RefId="%AID%_O-21%CC%025" Text="Optolink 200A: Sekundärpumpe Status"   />
+              <ComObjectRef Id="%AID%_O-21%CC%026_R-21%CC%02601" RefId="%AID%_O-21%CC%026" Text="Optolink 200A: Sekundärpumpe Leistung" />
+              <ComObjectRef Id="%AID%_O-21%CC%027_R-21%CC%02701" RefId="%AID%_O-21%CC%027" Text="Optolink 200A: Sekundär Vorlauf"       />
+              <ComObjectRef Id="%AID%_O-21%CC%028_R-21%CC%02801" RefId="%AID%_O-21%CC%028" Text="Optolink 200A: Sekundär Rücklauf"      />
+              <ComObjectRef Id="%AID%_O-21%CC%029_R-21%CC%02901" RefId="%AID%_O-21%CC%029" Text="Optolink 200A: Heizungsspeicher"       />
+              <ComObjectRef Id="%AID%_O-21%CC%030_R-21%CC%03001" RefId="%AID%_O-21%CC%030" Text="Optolink 200A: HK2 Vorlauf"            />
+              <ComObjectRef Id="%AID%_O-21%CC%031_R-21%CC%03101" RefId="%AID%_O-21%CC%031" Text="Optolink 200A: HK2 Niveau"             />
+              <ComObjectRef Id="%AID%_O-21%CC%032_R-21%CC%03201" RefId="%AID%_O-21%CC%032" Text="Optolink 200A: HK2 Neigung"            />
+              <ComObjectRef Id="%AID%_O-21%CC%033_R-21%CC%03301" RefId="%AID%_O-21%CC%033" Text="Optolink 200A: HK3 Vorlauf"            />
+              <ComObjectRef Id="%AID%_O-21%CC%034_R-21%CC%03401" RefId="%AID%_O-21%CC%034" Text="Optolink 200A: HK3 Niveau"             />
+              <ComObjectRef Id="%AID%_O-21%CC%035_R-21%CC%03501" RefId="%AID%_O-21%CC%035" Text="Optolink 200A: HK3 Neigung"            />
             </ComObjectRefs>
 
           </Static>
 
           <Dynamic>
             <ChannelIndependentBlock>
-
-              <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable_200A" Text="AAAllgemein" Icon="cog-outline" ShowInComObjectTree="true">
+              <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable_200A" Text="Parameterabfrage" Icon="heat-pump" ShowInComObjectTree="true">
                 <!-- Table header -->
                 <ParameterBlock Id="%AID%_PB-nnn" Inline="true" Layout="Grid" >
                   <Rows>
@@ -259,17 +269,19 @@
                   </Rows>
                   <Columns>
                     <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="5%" />
-                    <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="65%" />
+                    <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="10%" />
                     <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="15%" />
-                    <Column Id="%AID%_PB-nnn_C-4" Name="Col4" Width="15%" />
+                    <Column Id="%AID%_PB-nnn_C-4" Name="Col4" Width="5%" />
+                    <Column Id="%AID%_PB-nnn_C-5" Name="Col5" Width="65%" />
                   </Columns>
-                  <ParameterSeparator Id="%AID%_PS-nnn" Cell="1,2" Text="Parameter" UIHint="Headline" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Cell="1,3" Text="Aktiv" UIHint="Headline" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Cell="1,4" Text="Zeitinterval" UIHint="Headline" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Cell="1,2" Text="Aktiv" UIHint="Headline" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Cell="1,3" Text="Zeitinterval" UIHint="Headline" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Cell="1,5" Text="Parameterbeschreibung" UIHint="Headline" />
                 </ParameterBlock>
                 <!-- Table content -->    
                 <ParameterBlock Id="%AID%_PB-nnn" Inline="true" Layout="Grid" >
                   <Rows>
+                    <Row Id="%AID%_PB-nnn_R-1" />
                     <Row Id="%AID%_PB-nnn_R-2" />
                     <Row Id="%AID%_PB-nnn_R-3" />
                     <Row Id="%AID%_PB-nnn_R-4" />
@@ -315,134 +327,386 @@
                     <Row Id="%AID%_PB-nnn_R-44" />
                     <Row Id="%AID%_PB-nnn_R-45" />
                     <Row Id="%AID%_PB-nnn_R-46" />
+                    <Row Id="%AID%_PB-nnn_R-47" />
+                    <Row Id="%AID%_PB-nnn_R-48" />
+                    <Row Id="%AID%_PB-nnn_R-49" />
+                    <Row Id="%AID%_PB-nnn_R-50" />
                   </Rows>
                   <Columns>
                     <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="5%" />
-                    <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="65%" />
+                    <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="10%" />
                     <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="15%" />
-                    <Column Id="%AID%_PB-nnn_C-4" Name="Col4" Width="15%" />
+                    <Column Id="%AID%_PB-nnn_C-4" Name="Col4" Width="5%" />
+                    <Column Id="%AID%_PB-nnn_C-5" Name="Col5" Width="65%" />
                   </Columns>            
-                  
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Warmwasser" UIHint="Headline"   Cell="3,2" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="WW Oben"                        Cell="4,2" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%001_R-21%CC%00101"                Cell="4,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%101_R-21%CC%10101"                Cell="4,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="WW Unten"                       Cell="5,2"            /> 
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%002_R-21%CC%00201"                Cell="5,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%102_R-21%CC%10201"                Cell="5,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="WW Soll"                        Cell="6,2" /> 
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%003_R-21%CC%00301"                Cell="6,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%103_R-21%CC%10301"                Cell="6,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Außentemperatur"                Cell="7,2" /> 
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%004_R-21%CC%00401"                Cell="7,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%104_R-21%CC%10401"                Cell="7,4" />
-                
-              
-                  
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Energie" UIHint="Headline"      Cell="8,2" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="FaktorEnergie"                  Cell="9,2"  />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%005_R-21%CC%00501"                Cell="9,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%105_R-21%CC%10501"                Cell="9,4" />              
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="HeizWärmeHeizung"               Cell="10,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%006_R-21%CC%00601"                Cell="10,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%106_R-21%CC%10601"                Cell="10,4" />              
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="HeizWärmeWarmwasser"            Cell="11,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%007_R-21%CC%00701"                Cell="11,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%107_R-21%CC%10701"                Cell="11,4" />              
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="EnergieHeizung"                 Cell="12,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%008_R-21%CC%00801"                Cell="12,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%108_R-21%CC%10801"                Cell="12,4" />              
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="EnergieWarmwasser"              Cell="13,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%009_R-21%CC%00901"                Cell="13,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%109_R-21%CC%10901"                Cell="13,4" />              
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="JAZges"                         Cell="14,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%010_R-21%CC%01001"                Cell="14,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%110_R-21%CC%11001"                Cell="14,4" />              
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="JAZHE"                          Cell="15,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%011_R-21%CC%01101"                Cell="15,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%111_R-21%CC%11101"                Cell="15,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="JAZWW"                          Cell="16,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%012_R-21%CC%01201"                Cell="16,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%112_R-21%CC%11201"                Cell="16,4" />
-
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Verdichter" UIHint="Headline"   Cell="17,2" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Verdichter Status"              Cell="18,2"  />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%013_R-21%CC%01301"                Cell="18,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%113_R-21%CC%11301"                Cell="18,4" />              
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Verdichter Prozent"             Cell="19,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%014_R-21%CC%01401"                Cell="19,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%114_R-21%CC%11401"                Cell="19,4" />              
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Kälteumkehr"                    Cell="20,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%015_R-21%CC%01501"                Cell="20,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%115_R-21%CC%11501"                Cell="20,4" />              
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="ECV"                            Cell="21,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%016_R-21%CC%01601"                Cell="21,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%116_R-21%CC%11601"                Cell="21,4" />              
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Primär Vorlauf"                 Cell="22,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%017_R-21%CC%01701"                Cell="22,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%117_R-21%CC%11701"                Cell="22,4" />              
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Primär Rücklauf"                Cell="23,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%018_R-21%CC%01801"                Cell="23,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%118_R-21%CC%11801"                Cell="23,4" />              
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Lüfter Status"                  Cell="24,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%019_R-21%CC%01901"                Cell="24,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%119_R-21%CC%11901"                Cell="24,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Lüfter Prozent"                 Cell="25,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%020_R-21%CC%02001"                Cell="25,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%120_R-21%CC%12001"                Cell="25,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Sauggas Temperatur"             Cell="26,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%021_R-21%CC%02101"                Cell="26,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%121_R-21%CC%12101"                Cell="26,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Sauggas Druck"                  Cell="27,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%022_R-21%CC%02201"                Cell="27,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%122_R-21%CC%12201"                Cell="27,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heißgas Temperatur"             Cell="28,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%023_R-21%CC%02301"                Cell="28,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%123_R-21%CC%12301"                Cell="28,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heißgas Druck"                  Cell="29,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%024_R-21%CC%02401"                Cell="29,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%124_R-21%CC%12401"                Cell="29,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Sekundärpumpe Status"           Cell="30,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%025_R-21%CC%02501"                Cell="30,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%125_R-21%CC%12501"                Cell="30,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Sekundärpumpe Prozent"          Cell="31,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%026_R-21%CC%02601"                Cell="31,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%126_R-21%CC%12601"                Cell="31,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Sekundär Vorlauf Temperatur"    Cell="32,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%027_R-21%CC%02701"                Cell="32,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%127_R-21%CC%12701"                Cell="32,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Sekundär Rücklauf Temperatur"   Cell="33,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%028_R-21%CC%02801"                Cell="33,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%128_R-21%CC%12801"                Cell="33,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizungsspeicher Termperatur"   Cell="34,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%029_R-21%CC%02901"                Cell="34,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%129_R-21%CC%12901"                Cell="34,4" />
-
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreise" UIHint="Headline"   Cell="35,2" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreis 2 Vorlauf Temperatur" Cell="36,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%030_R-21%CC%03001"                Cell="36,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%130_R-21%CC%13001"                Cell="36,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreis 2 Niveau"             Cell="37,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%031_R-21%CC%03101"                Cell="37,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%131_R-21%CC%13101"                Cell="37,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreis 2 Level"              Cell="38,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%032_R-21%CC%03201"                Cell="38,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%132_R-21%CC%13201"                Cell="38,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreis 3 Vorlauf Temperatur" Cell="39,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%033_R-21%CC%03301"                Cell="39,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%133_R-21%CC%13301"                Cell="39,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreis 3 Niveau"             Cell="40,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%034_R-21%CC%03401"                Cell="40,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%134_R-21%CC%13401"                Cell="40,4" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreis 3 Level"              Cell="41,2" />  
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%035_R-21%CC%03501"                Cell="41,3" />
-                  <ParameterRefRef    RefId="%AID%_UP-21%CC%135_R-21%CC%13501"                Cell="41,4" />
-
+                  <!-- Warmwasser -->
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Warmwasser" UIHint="Headline"   Cell="3,5" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="WW Speicher Oben"               Cell="4,5" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%000_R-21%CC%00001"                Cell="4,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%100_R-21%CC%10001"                Cell="4,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="WW Speicher Unten"              Cell="5,5" /> 
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%001_R-21%CC%00101"                Cell="5,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%101_R-21%CC%10101"                Cell="5,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="WW Speicher Soll"               Cell="6,5" /> 
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%002_R-21%CC%00201"                Cell="6,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%102_R-21%CC%10201"                Cell="6,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="WW Bereitung"                   Cell="7,5" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%003_R-21%CC%00301"                Cell="7,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%103_R-21%CC%10301"                Cell="7,3" />
+                  <!-- Energie -->
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Energie" UIHint="Headline"      Cell="9,5" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Faktor Energie"                 Cell="10,5"  />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%005_R-21%CC%00501"                Cell="10,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%105_R-21%CC%10501"                Cell="10,3" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizwärme Heizung"              Cell="11,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%006_R-21%CC%00601"                Cell="11,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%106_R-21%CC%10601"                Cell="11,3" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizwärme Warmwasser"           Cell="12,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%007_R-21%CC%00701"                Cell="12,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%107_R-21%CC%10701"                Cell="12,3" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Energie Heizung"                Cell="13,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%008_R-21%CC%00801"                Cell="13,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%108_R-21%CC%10801"                Cell="13,3" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Energie Warmwasser"             Cell="14,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%009_R-21%CC%00901"                Cell="14,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%109_R-21%CC%10901"                Cell="14,3" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="JAZ Gesamt"                     Cell="15,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%010_R-21%CC%01001"                Cell="15,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%110_R-21%CC%11001"                Cell="15,3" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="JAZ Heizung"                    Cell="16,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%011_R-21%CC%01101"                Cell="16,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%111_R-21%CC%11101"                Cell="16,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="JAZ Warmwasser"                 Cell="17,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%012_R-21%CC%01201"                Cell="17,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%112_R-21%CC%11201"                Cell="17,3" />
+                  <!-- Verdichter -->
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Verdichter" UIHint="Headline"   Cell="19,5" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Verdichter Status"              Cell="20,5"  />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%013_R-21%CC%01301"                Cell="20,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%113_R-21%CC%11301"                Cell="20,3" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Verdichter Prozent"             Cell="21,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%014_R-21%CC%01401"                Cell="21,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%114_R-21%CC%11401"                Cell="21,3" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Kälteumkehr"                    Cell="22,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%015_R-21%CC%01501"                Cell="22,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%115_R-21%CC%11501"                Cell="22,3" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="ECV"                            Cell="23,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%016_R-21%CC%01601"                Cell="23,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%116_R-21%CC%11601"                Cell="23,3" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Primär Vorlauf"                 Cell="24,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%017_R-21%CC%01701"                Cell="24,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%117_R-21%CC%11701"                Cell="24,3" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Primär Rücklauf"                Cell="25,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%018_R-21%CC%01801"                Cell="25,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%118_R-21%CC%11801"                Cell="25,3" />              
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Lüfter Status"                  Cell="26,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%019_R-21%CC%01901"                Cell="26,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%119_R-21%CC%11901"                Cell="26,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Lüfter Prozent"                 Cell="27,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%020_R-21%CC%02001"                Cell="27,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%120_R-21%CC%12001"                Cell="27,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Sauggas Temperatur"             Cell="28,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%021_R-21%CC%02101"                Cell="28,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%121_R-21%CC%12101"                Cell="28,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Sauggas Druck"                  Cell="29,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%022_R-21%CC%02201"                Cell="29,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%122_R-21%CC%12201"                Cell="29,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heißgas Temperatur"             Cell="30,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%023_R-21%CC%02301"                Cell="30,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%123_R-21%CC%12301"                Cell="30,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heißgas Druck"                  Cell="31,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%024_R-21%CC%02401"                Cell="31,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%124_R-21%CC%12401"                Cell="31,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Sekundärpumpe Status"           Cell="32,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%025_R-21%CC%02501"                Cell="32,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%125_R-21%CC%12501"                Cell="32,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Sekundärpumpe Prozent"          Cell="33,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%026_R-21%CC%02601"                Cell="33,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%126_R-21%CC%12601"                Cell="33,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Sekundär Vorlauf Temperatur"    Cell="34,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%027_R-21%CC%02701"                Cell="34,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%127_R-21%CC%12701"                Cell="34,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Sekundär Rücklauf Temperatur"   Cell="35,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%028_R-21%CC%02801"                Cell="35,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%128_R-21%CC%12801"                Cell="35,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizungsspeicher Termperatur"   Cell="36,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%029_R-21%CC%02901"                Cell="36,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%129_R-21%CC%12901"                Cell="36,3" />
+                  <!-- Heizkreise -->
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreise" UIHint="Headline"   Cell="38,5" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreis 2 Vorlauf Temperatur" Cell="39,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%030_R-21%CC%03001"                Cell="39,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%130_R-21%CC%13001"                Cell="39,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreis 2 Niveau"             Cell="40,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%031_R-21%CC%03101"                Cell="40,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%131_R-21%CC%13101"                Cell="40,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreis 2 Neigung"            Cell="41,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%032_R-21%CC%03201"                Cell="41,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%132_R-21%CC%13201"                Cell="41,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreis 3 Vorlauf Temperatur" Cell="42,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%033_R-21%CC%03301"                Cell="42,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%133_R-21%CC%13301"                Cell="42,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreis 3 Niveau"             Cell="43,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%034_R-21%CC%03401"                Cell="43,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%134_R-21%CC%13401"                Cell="43,3" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Heizkreis 3 Neigung"            Cell="44,5" />  
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%035_R-21%CC%03501"                Cell="44,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%135_R-21%CC%13501"                Cell="44,3" />
+                  <!-- Sonstiges -->
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Sonstiges" UIHint="Headline"    Cell="46,5" />
+                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Außentemperatur"                Cell="47,5" /> 
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%004_R-21%CC%00401"                Cell="47,2" />
+                  <ParameterRefRef    RefId="%AID%_UP-21%CC%104_R-21%CC%10401"                Cell="47,3" />
                 </ParameterBlock>
-                
-              
-              </ParameterBlock>
+                <!--  table end  -->
 
+
+
+                <choose ParamRefId="%AID%_UP-21%CC%000_R-21%CC%00001"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%000_R-21%CC%00001" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%001_R-21%CC%00101"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%001_R-21%CC%00101" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%002_R-21%CC%00201"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%002_R-21%CC%00201" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%003_R-21%CC%00301"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%003_R-21%CC%00301" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%004_R-21%CC%00401"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%004_R-21%CC%00401" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%005_R-21%CC%00501"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%005_R-21%CC%00501" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%006_R-21%CC%00601"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%006_R-21%CC%00601" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%007_R-21%CC%00701"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%007_R-21%CC%00701" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%008_R-21%CC%00801"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%008_R-21%CC%00801" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%009_R-21%CC%00901"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%009_R-21%CC%00901" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%010_R-21%CC%01001"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%010_R-21%CC%01001" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%011_R-21%CC%01101"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%011_R-21%CC%01101" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%012_R-21%CC%01201"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%012_R-21%CC%01201" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%013_R-21%CC%01301"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%013_R-21%CC%01301" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%014_R-21%CC%01401"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%014_R-21%CC%01401" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%015_R-21%CC%01501"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%015_R-21%CC%01501" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%016_R-21%CC%01601"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%016_R-21%CC%01601" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%017_R-21%CC%01701"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%017_R-21%CC%01701" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%018_R-21%CC%01801"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%018_R-21%CC%01801" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%019_R-21%CC%01901"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%019_R-21%CC%01901" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%020_R-21%CC%02001"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%020_R-21%CC%02001" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%021_R-21%CC%02101"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%021_R-21%CC%02101" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%022_R-21%CC%02201"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%022_R-21%CC%02201" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%023_R-21%CC%02301"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%023_R-21%CC%02301" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%024_R-21%CC%02401"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%024_R-21%CC%02401" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%025_R-21%CC%02501"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%025_R-21%CC%02501" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%026_R-21%CC%02601"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%026_R-21%CC%02601" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%027_R-21%CC%02701"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%027_R-21%CC%02701" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%028_R-21%CC%02801"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%028_R-21%CC%02801" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%029_R-21%CC%02901"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%029_R-21%CC%02901" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%030_R-21%CC%03001"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%030_R-21%CC%03001" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%031_R-21%CC%03101"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%031_R-21%CC%03101" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%032_R-21%CC%03201"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%032_R-21%CC%03201" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%033_R-21%CC%03301"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%033_R-21%CC%03301" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%034_R-21%CC%03401"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%034_R-21%CC%03401" />
+                  </when>
+                </choose>
+                <choose ParamRefId="%AID%_UP-21%CC%035_R-21%CC%03501"> 
+                  <when test="1">
+                    <ComObjectRefRef RefId="%AID%_O-21%CC%035_R-21%CC%03501" />
+                  </when>
+                </choose>
+
+
+
+
+
+              </ParameterBlock>
+                   
+                    <ParameterBlock Id="%AID%_PB-nnn" Name="Konfiguration_200A" Text="Konfiguration" Icon="heat-pump" ShowInComObjectTree="true">
+                      <ParameterSeparator Id="%AID%_PS-nnn" Text="Konfiguration der Wärmepumpe ändern" UIHint="Headline" />
+                      
+                      <ParameterSeparator Id="%AID%_PS-nnn" Text="Natürlich bist du Profi und weißt ganz genau was du tust" UIHint="Headline" />
+
+                      <ParameterSeparator Id="%AID%_PS-nnn" Text="Erst die aktuellen Werte abfragen, ändern und dann wieder in die Wärmepumpe übertragen" UIHint="Headline" />
+                      <ParameterBlock Id="%AID%_PB-nnn" Name="Konfiguration_200A_Warmwasser" Text="Warmwasser" Icon="heat-pump" ShowInComObjectTree="true">
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Konfiguration Warmwasser" UIHint="Headline" />
+                        <Button Id="%AID%_B-%TT%00010" Text="Konfiguration Warmwasser lesen" EventHandler="OPTO_Warmwasser_lesen" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                        <Button Id="%AID%_B-%TT%00011" Text="Konfiguration Warmwasser speichern" EventHandler="OPTO_Warmwasser_speichern" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                      </ParameterBlock>
+                      <ParameterBlock Id="%AID%_PB-nnn" Name="Konfiguration_200A_Verdichter" Text="Verdichter" Icon="heat-pump" ShowInComObjectTree="true">
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Konfiguration Verdichter" UIHint="Headline" />
+                        <Button Id="%AID%_B-%TT%00012" Text="Konfiguration Verdichter lesen" EventHandler="OPTO_Verdichter_lesen" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                        <Button Id="%AID%_B-%TT%00013" Text="Konfiguration Verdichter speichern" EventHandler="OPTO_Verdichter_speichern" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                      </ParameterBlock>
+                      <ParameterBlock Id="%AID%_PB-nnn" Name="Konfiguration_200A_Heizkreis_2" Text="Heizkreis 2" Icon="heat-pump" ShowInComObjectTree="true">
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Konfiguration Heizkreis 2" UIHint="Headline" />
+                        <Button Id="%AID%_B-%TT%00014" Text="Konfiguration Heizkreis 2 lesen" EventHandler="OPTO_Heizkreis_2_lesen" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                        <Button Id="%AID%_B-%TT%00015" Text="Konfiguration Heizkreis 2 speichern" EventHandler="OPTO_Heizkreis_2_speichern" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                      </ParameterBlock>
+                      <ParameterBlock Id="%AID%_PB-nnn" Name="Konfiguration_200A_Heizkreis_3" Text="Heizkreis 3" Icon="heat-pump" ShowInComObjectTree="true">
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Konfiguration Heizkreis 3" UIHint="Headline" />
+                        <Button Id="%AID%_B-%TT%00016" Text="Konfiguration Heizkreis 3 lesen" EventHandler="OPTO_Heizkreis_3_lesen" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                        <Button Id="%AID%_B-%TT%00017" Text="Konfiguration Heizkreis 3 speichern" EventHandler="OPTO_Heizkreis_3_speichern" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                      </ParameterBlock>
+                      
+                    </ParameterBlock>
+                    <ParameterBlock Id="%AID%_PB-nnn" Name="Schaltzeiten_200A" Text="Schaltzeiten" Icon="clock-outline" ShowInComObjectTree="true">
+                      <ParameterSeparator Id="%AID%_PS-nnn" Text="Konfiguration der Schaltzeiten" UIHint="Headline" />
+                      
+                      <ParameterSeparator Id="%AID%_PS-nnn" Text="Wenn das Warmwasser kalt bleibt oder die Fenster von innen zufrieren, dann kommt deine Frau mit dem Nudelholz" UIHint="Headline" />
+                      <ParameterBlock Id="%AID%_PB-nnn" Name="Schaltzeiten_200A_Warmwasser" Text="Warmwasser" Icon="table-clock" ShowInComObjectTree="true">
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Konfiguration Schaltzeiten Warmwasser" UIHint="Headline" />
+                        <Button Id="%AID%_B-%TT%00020" Text="Schaltzeiten Warmwasser lesen" EventHandler="OPTO_Schaltzeiten_Warmwasser_lesen" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                        <Button Id="%AID%_B-%TT%00021" Text="Schaltzeiten Warmwasser speichern" EventHandler="OPTO_Schaltzeiten_Warmwasser_speichern" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                      </ParameterBlock>
+                      <ParameterBlock Id="%AID%_PB-nnn" Name="Schaltzeiten_200A_Heizkreis_1" Text="Heizkreis 1" Icon="table-clock" ShowInComObjectTree="true">
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Konfiguration Schaltzeiten Heizkreis 1" UIHint="Headline" />
+                        <Button Id="%AID%_B-%TT%00022" Text="Schaltzeiten Heizkreis 1 lesen" EventHandler="OPTO_Schaltzeiten_Heizkreis_1_lesen" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{  &quot;channelCount&quot;: %N% }" />
+                        <Button Id="%AID%_B-%TT%00023" Text="Schaltzeiten Heizkreis 1 speichern" EventHandler="OPTO_Schaltzeiten_Heizkreis_1_speichern" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{  &quot;channelCount&quot;: %N% }" />
+                      </ParameterBlock>
+                      <ParameterBlock Id="%AID%_PB-nnn" Name="Schaltzeiten_200A_Heizkreis_2" Text="Heizkreis 2" Icon="table-clock" ShowInComObjectTree="true">
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Konfiguration Schaltzeiten Heizkreis 2" UIHint="Headline" />
+                        <Button Id="%AID%_B-%TT%00024" Text="Schaltzeiten Heizkreis 2 lesen" EventHandler="OPTO_Schaltzeiten_Heizkreis_2_lesen" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                        <Button Id="%AID%_B-%TT%00025" Text="Schaltzeiten Heizkreis 2 speichern" EventHandler="OPTO_Schaltzeiten_Heizkreis_2_speichern" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                      </ParameterBlock>
+                      <ParameterBlock Id="%AID%_PB-nnn" Name="Schaltzeiten_200A_Heizkreis_3" Text="Heizkreis 3" Icon="table-clock" ShowInComObjectTree="true">
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Konfiguration Schaltzeiten Heizkreis 3" UIHint="Headline" />
+                        <Button Id="%AID%_B-%TT%00026" Text="Schaltzeiten Heizkreis 3 lesen" EventHandler="OPTO_Schaltzeiten_Heizkreis_3_lesen" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                        <Button Id="%AID%_B-%TT%00027" Text="Schaltzeiten Heizkreis 3 speichern" EventHandler="OPTO_Schaltzeiten_Heizkreis_3_speichern" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                      </ParameterBlock>
+                      <ParameterBlock Id="%AID%_PB-nnn" Name="Schaltzeiten_200A_Verdichter_Geräuschreduziert" Text="Geräuschreduzierter Betrieb" Icon="table-clock" ShowInComObjectTreee="true">
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Konfiguration Schaltzeiten Verdichter Geräuschreduzierter Betrieb" UIHint="Headline" />
+                        <Button Id="%AID%_B-%TT%00028" Text="Schaltzeiten Verdichter Geräuschreduzierter Betrieb lesen" EventHandler="OPTO_Schaltzeiten_Verdichter_Geraeuschreduzierter_Betrieb_lesen" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                        <Button Id="%AID%_B-%TT%00029" Text="Schaltzeiten Verdichter Geräuschreduzierter Betrieb speichern" EventHandler="OPTO_Schaltzeiten_Verdichter_Geraeuschreduzierter_Betrieb_speichern" EventHandlerOnline="ConnectionOriented" EventHandlerParameters="{ &quot;channelCount&quot;: %N% }" />
+                      </ParameterBlock>
+                    </ParameterBlock>
             </ChannelIndependentBlock>
           </Dynamic>
 

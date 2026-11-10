@@ -10,18 +10,15 @@
 
           <Static>
             <ParameterTypes>
-              
-
               <ParameterType Id="%AID%_PT-HeaterTyp" Name="Heizungstyp">
                 <TypeRestriction Base="Value" SizeInBit="6" UIHint="DropDown">
-                  <Enumeration Text="Deaktiviert"   Value="0" Id="%ENID%" />
+                  <Enumeration Text="Deaktiviert"        Value="0" Id="%ENID%" />
                   <Enumeration Text="Vitocal 200 A WO1C" Value="1" Id="%ENID%" />
-                  <Enumeration Text="Vitocal 250 A" Value="2" Id="%ENID%" />
-                  <Enumeration Text="Vitocal 300 A" Value="3" Id="%ENID%" />
+                  <Enumeration Text="Vitocal 250 A"      Value="2" Id="%ENID%" />
+                  <Enumeration Text="Vitocal 300 A"      Value="3" Id="%ENID%" />
                   <!-- 4 bit free -->
                 </TypeRestriction>
               </ParameterType>
-
               <ParameterType Id="%AID%_PT-HardwareVersion" Name="Hardwareversion">
                 <TypeRestriction Base="Value" SizeInBit="2" UIHint="DropDown">
                   <Enumeration Text="Deaktiviert" Value="0" Id="%ENID%" />
@@ -33,35 +30,35 @@
               <ParameterType Id="%AID%_PT-IntervalTime" Name="IntervalTime">
                 <TypeNumber SizeInBit="12" Type="unsignedInt" minInclusive="30" maxInclusive="4095" />
               </ParameterType>
-
             </ParameterTypes>
 
             <Parameters>      
-              <op:include href="OptolinkModule_200A.xml" xpath="//ApplicationProgram/Static/Parameters/Union" type="template" prefix="OPTO_200_Par" />
-              
- 
+              <op:include href="OptolinkModule_200A.xml" xpath="//ApplicationProgram/Static/Parameters/*" type="template" prefix="OPTO_200_Par" />
               <Union SizeInBit="8">
                 <Memory CodeSegment="%AID%_RS-04-00000" Offset="0" BitOffset="0" />
                 <Parameter Id="%AID%_UP-%TT%00001" Name="HardwareVersion"           ParameterType="%AID%_PT-HardwareVersion" Offset="0" BitOffset="0" Text="Hardware-Version" Value="0" />
                 <Parameter Id="%AID%_UP-%TT%00002" Name="HeaterType"                ParameterType="%AID%_PT-HeaterType"      Offset="0" BitOffset="2" Text="HeaterType"       Value="0" />
                 <!-- 4 bit free -->
               </Union>
-              
            </Parameters>
 
             <ParameterRefs>
               <op:include href="OptolinkModule_200A.xml" xpath="//ApplicationProgram/Static/ParameterRefs/ParameterRef" type="template" prefix="OPTO_200_Par_Ref" />
-
               <ParameterRef Id="%AID%_UP-%TT%00001_R-%TT%0000101" RefId="%AID%_UP-%TT%00001" />
               <ParameterRef Id="%AID%_UP-%TT%00002_R-%TT%0000201" RefId="%AID%_UP-%TT%00002" />
-
             </ParameterRefs>
 
             <ComObjectTable>
+            <op:include href="OptolinkModule_200A.xml" xpath="//Static/ComObjectTable/*" type="template" prefix="OPTO_200A" IsInner="true" />
             </ComObjectTable>
 
             <ComObjectRefs>
+            <op:include href="OptolinkModule_200A.xml" xpath="//Static/ComObjectRefs/*" type="template" prefix="OPTO_200A" IsInner="true" />
             </ComObjectRefs>
+
+            <Script>
+              <op:include href="OptolinkModule_200A.script.js" prefix="OPTO" type="script" />
+            </Script>
 
             <Extension>
               <Baggage RefId="%FILE-HELP-de%" />
@@ -73,8 +70,8 @@
           </Static>
 
           <Dynamic>
-            <Channel Name="Optolink" Text="Optolink" Number="%PREFIX%" Id="%AID%_CH-%PREFIX%" HelpContext="Empty" >
-              <ParameterBlock Id="%AID%_PB-nnn" Name="Settings" Text="Allgemein" Icon="fire" ShowInComObjectTree="true">
+            <Channel Name="Optolink" Text="Optolink" Number="%PREFIX%" Id="%AID%_CH-%PREFIX%" HelpContext="Empty" Icon="radiator" >
+              <ParameterBlock Id="%AID%_PB-nnn" Name="Settings" Text="Allgemein" Icon="cog-outline" ShowInComObjectTree="true">
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="Optolink" UIHint="Headline" />
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="Version: %ModuleVersion%" />
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
@@ -89,9 +86,15 @@
               
                 <choose ParamRefId="%AID%_UP-%TT%00002_R-%TT%0000201"> <!-- Heater Type -->
                   <when test="1">
-                    <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable_200A" Text="Parameterabfrage 200A" Icon="heat-pump" ShowInComObjectTree="true">
-                    <op:include href="OptolinkModule_200A.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock/*" type="template" prefix="OPTO_200A" IsInner="true" />
-                    </ParameterBlock>
+                    <op:include href="OptolinkModule_200A.xml" xpath="//Dynamic/ChannelIndependentBlock/*" prefix="OPTO" type="template" IsInner="true" />
+                    
+                    
+                    
+                    
+
+
+
+
                   </when>
                   <when test="2">
                     <ParameterBlock Id="%AID%_PB-nnn" Name="AssignmentTable_250A" Text="Parameterabfrage 250A" Icon="cog-outline" ShowInComObjectTree="true">
